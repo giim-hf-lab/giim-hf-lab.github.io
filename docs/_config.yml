@@ -1,0 +1,33 @@
+name: "广东省科学院智能制造研究所人因工程团队"
+baseurl: /
+include:
+  - "_pages"
+
+authors:
+  leader:
+    name: "钟震宇"
+    display_name: "钟震宇"
+    description: "团队负责人"
+  leihuan:
+    name: "雷欢"
+    display_name: "雷欢"
+  jiaozeyu:
+    name: "焦泽昱"
+    display_name: "焦泽昱"
+  tinson:
+    name: "赖庭晟"
+    display_name: Tinson
+    email: me@tinson.dev
+    gravatar: 0a4ebdd90e094f6d70c63096e59c1485
+    description: "网站创建及维护"
+    github: laitingsheng
+
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-archives
+  - jekyll-figure
+
+remote_theme: wowthemesnet/jekyll-theme-memoirs
