@@ -1,5 +1,6 @@
 name: "广东省科学院智能制造研究所人因工程团队"
 baseurl: /
+logo: assets/images/logo.png
 include:
   - "_pages"
 
