@@ -1,15 +1,23 @@
-- name: "钟震宇"
-  display_name: "钟震宇"
-  description: "团队负责人"
-- name: "雷欢"
-  display_name: "雷欢"
-- name: "焦泽昱"
-  display_name: "焦泽昱"
-- name: "陈再励"
-  display_name: "陈再励"
-- name: "马敬奇"
-  display_name: "马敬奇"
-- name: "赖庭晟"
+- name: 钟震宇
+  display_name: 钟震宇
+  description: 团队负责人
+
+- name: 雷欢
+  display_name: 雷欢
+  github: leihuan925
+
+- name: 焦泽昱
+  display_name: 焦泽昱
+
+- name: 陈再励
+  display_name: 陈再励
+  github: WanderingLeeth
+
+- name: 马敬奇
+  display_name: 马敬奇
+  github: laomaup
+
+- name: 赖庭晟
   display_name: Tinson
   email: me@tinson.dev
   gravatar: 0a4ebdd90e094f6d70c63096e59c1485

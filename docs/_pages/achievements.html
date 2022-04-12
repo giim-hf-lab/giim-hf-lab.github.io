@@ -1,0 +1,147 @@
+---
+layout: default
+title: 科研成果
+permalink: /achievements
+comments: false
+---
+
+<br>
+
+<h1 id="publications">发表文章</h1>
+<hr>
+
+<div class="table-responsive">
+	<table class="table table-bordered">
+		<thead>
+			<tr class="d-flex">
+				<th class="col-2" scope="col">发表时间</th>
+				<th class="col-3" scope="col">期刊/大会</th>
+				<th class="col-3" scope="col">作者</th>
+				<th class="col-4" scope="col">标题</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% assign year_groups = site.data.achievements.publications | group_by: "accepted.year" | sort: "name" %}
+			{% for year_group in year_groups reversed %}
+				{% assign month_groups = year_group.items | group_by: "accepted.month" | sort: "name" | reversed %}
+				{% for month_group in month_groups %}
+					{% assign sorted_items = month_group.items | sort: "accepted.by" %}
+					{% for item in sorted_items %}
+			<tr class="d-flex">
+				<th class="col-2" scope="row">{{ year_group.name }}年{{ month_group.name }}月</th>
+				<td class="col-3">{{ item.accepted.by }}</td>
+				<td class="col-3">{{ item.authors | join: ", " }}</td>
+				<td class="col-4"><a target="_blank" href="https://doi.org/{{ item.doi.prefix }}/{{ item.doi.suffix }}">{{ item.title }}</a></td>
+			</tr>
+					{% endfor %}
+				{% endfor %}
+			{% endfor %}
+		</tbody>
+	</table>
+</div>
+
+<br>
+
+<h1 id="patents">申请专利</h1>
+<hr>
+
+<div class="table-responsive">
+	<table class="table table-bordered">
+		<thead>
+			<tr class="d-flex">
+				<th class="col-2" scope="col">专利号</th>
+				<th class="col-10" scope="col">专利名称</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% assign sorted_patents = site.data.achievements.patents | sort: "id" %}
+			{% for patent in sorted_patents reversed %}
+			<tr class="d-flex">
+				<th class="col-2" scope="row">{{ patent.id }}</th>
+				<td class="col-10">{{ patent.title }}</td>
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+</div>
+
+<br>
+
+<h1 id="projects">重大项目</h1>
+<hr>
+
+<div class="table-responsive">
+	<table class="table table-bordered">
+		<thead>
+			<tr class="d-flex">
+				<th class="col-2" scope="col">项目编号</th>
+				<th class="col-4" scope="col">项目所属计划及领域</th>
+				<th class="col-5" scope="col">项目名称</th>
+				<th class="col-1" scope="col">项目经费</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% assign sorted_projects = site.data.achievements.projects | sort: "id" %}
+			{% for project in sorted_projects reversed %}
+			<tr class="d-flex">
+				<th class="col-2" scope="col">{{ project.id }}</th>
+				<td class="col-4" scope="col">{{ project.super_project }}{{ project.category }}</td>
+				<td class="col-5" scope="col">{{ project.title }}</td>
+				<td class="col-1" scope="col">{{ project.allowance.amount }}{{ project.allowance.scale }}{{ project.allowance.unit }}</td>
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+</div>
+
+<br>
+
+<h1 id="copyrights">软件著作权</h1>
+<hr>
+
+<div class="table-responsive">
+	<table class="table table-bordered">
+		<thead>
+			<tr class="d-flex">
+				<th class="col-2" scope="col">软件著作编号</th>
+				<th class="col-10" scope="col">软件著作名称</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% assign sorted_copyrights = site.data.achievements.copyrights | sort: "id" %}
+			{% for copyright in sorted_copyrights reversed %}
+			<tr class="d-flex">
+				<th class="col-2" scope="row">{{ copyright.id }}</th>
+				<td class="col-10">{{ copyright.title }}</td>
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+</div>
+
+<br>
+
+<h1 id="awards">获得奖项</h1>
+<hr>
+
+<div class="table-responsive">
+	<table class="table table-bordered">
+		<thead>
+			<tr class="d-flex">
+				<th class="col-2" scope="col">奖项编号</th>
+				<th class="col-3" scope="col">奖项</th>
+				<th class="col-7" scope="col">获奖项目名称</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% assign sorted_awards = site.data.achievements.awards | sort: "id" %}
+			{% for award in sorted_awards reversed %}
+			<tr class="d-flex">
+				<th class="col-2" scope="row">{{ award.id }}</th>
+				<td class="col-3">{{ award.award }}</td>
+				<td class="col-7">{{ award.title }}</td>
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+</div>

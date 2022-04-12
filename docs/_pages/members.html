@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: default
 title: 团队成员
 permalink: /members
 comments: false
@@ -20,6 +20,10 @@ comments: false
 					<a target="_blank" class="d-inline-block mx-1 text-dark" href="{{ member.web }}"><i class="fa-solid fa-link"></i></a>
 					{% endif %}
 
+					{% if member.linkedin %}
+					<a target="_blank" class="d-inline-block mx-1 text-dark" href="https://linkedin.com/in/{{ member.linkedin }}"><i class="fa-brands fa-linkedin"></i></a>
+					{% endif %}
+
 					{% if member.email %}
 					<a class="d-inline-block mx-1 text-dark" href="mailto:{{ member.email }}"><i class="fa-solid fa-envelope"></i></a>
 					{% endif %}
@@ -27,13 +31,8 @@ comments: false
 					{% if member.github %}
 					<a target="_blank" class="d-inline-block mx-1 text-dark" href="https://github.com/{{ member.github }}"><i class="fa-brands fa-github"></i></a>
 					{% endif %}
-
-					{% if member.linkedin %}
-					<a target="_blank" class="d-inline-block mx-1 text-dark" href="https://linkedin.com/in/{{ member.linkedin }}"><i class="fa-brands fa-linkedin"></i></a>
-					{% endif %}
 				</p>
 			</div>
-
 			<div class="col-md-9">
 				<h3>{{ member.display_name }}</h3>
 				<p class="mt-3 mb-0">{{ member.description }}</p>
