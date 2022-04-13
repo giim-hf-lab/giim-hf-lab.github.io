@@ -25,11 +25,15 @@ comments: false
 					{% endif %}
 
 					{% if member.email %}
-					<a class="d-inline-block mx-1 text-dark" href="mailto:{{ member.email }}"><i class="fa-solid fa-envelope"></i></a>
+					<a target="_blank" class="d-inline-block mx-1 text-dark" href="mailto:{{ member.email }}"><i class="fa-solid fa-envelope"></i></a>
 					{% endif %}
 
 					{% if member.github %}
 					<a target="_blank" class="d-inline-block mx-1 text-dark" href="https://github.com/{{ member.github }}"><i class="fa-brands fa-github"></i></a>
+					{% endif %}
+
+					{% if member.pdf %}
+					<a target="_blank" class="d-inline-block mx-1 text-dark" href="{{ member.pdf }}"><i class="fa-solid fa-file-pdf"></i></a>
 					{% endif %}
 				</p>
 			</div>
