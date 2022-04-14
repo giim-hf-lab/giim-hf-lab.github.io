@@ -9,12 +9,7 @@ comments: false
 	<div id="{{ member.name }}" class="authorbox position-relative pb-5 pt-5 mb-4 mt-4 border">
 		<div class="row">
 			<div class="wrapavname col-md-3 text-center">
-				{% if member.gravatar %}
-				<img class="author-thumb" src="https://www.gravatar.com/avatar/{{ member.gravatar }}?s=250&d=mm&r=x" alt="{{ author.display_name }}">
-				{% else %}
 				<img class="author-thumb" src="{{site.baseurl}}/{{ member.avatar }}" alt="{{ author.display_name }}">
-				{% endif %}
-
 				<p class="mt-4 mb-0 small text-center">
 					{% if member.web %}
 					<a target="_blank" class="d-inline-block mx-1 text-dark" href="{{ member.web }}"><i class="fa-solid fa-link"></i></a>

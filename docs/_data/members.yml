@@ -19,9 +19,9 @@
 
 - name: 赖庭晟
   display_name: Tinson
-  web: https://tinson.dev/onlinecv/zh-cn/
+  web: https://cv.tinson.dev/zh-cn/
   email: me@tinson.dev
-  gravatar: 0a4ebdd90e094f6d70c63096e59c1485
+  avatar: assets/avatars/tinson.png
   github: laitingsheng
   linkedin: laitingsheng
-  pdf: https://tinson.dev/onlinecv/pdfs/zh-cn.pdf
+  pdf: https://cv.tinson.dev/pdfs/jsonresume/zh-cn.pdf
