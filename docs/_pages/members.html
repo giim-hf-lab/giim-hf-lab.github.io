@@ -6,35 +6,35 @@ comments: false
 ---
 <div class="list-authors mt-5">
 	{% for member in site.data.members %}
-	<div id="{{ member.name }}" class="authorbox position-relative pb-5 pt-5 mb-4 mt-4 border">
+	<div id="{{ member[0] }}" class="authorbox position-relative pb-5 pt-5 mb-4 mt-4 border">
 		<div class="row">
 			<div class="wrapavname col-md-3 text-center">
-				<img class="author-thumb" src="{{site.baseurl}}/{{ member.avatar }}" alt="{{ author.display_name }}">
+				<img class="author-thumb" src="{{site.baseurl}}/assets/avatars/{{ member[0] }}.png" alt="{{ member.name }}">
 				<p class="mt-4 mb-0 small text-center">
-					{% if member.web %}
-					<a target="_blank" class="d-inline-block mx-1 text-dark" href="{{ member.web }}"><i class="fa-solid fa-link"></i></a>
+					{% if member[1].web %}
+					<a target="_blank" class="d-inline-block mx-1 text-dark" href="{{ member[1].web }}"><i class="fa-solid fa-link"></i></a>
 					{% endif %}
 
-					{% if member.linkedin %}
-					<a target="_blank" class="d-inline-block mx-1 text-dark" href="https://linkedin.com/in/{{ member.linkedin }}"><i class="fa-brands fa-linkedin"></i></a>
+					{% if member[1].linkedin %}
+					<a target="_blank" class="d-inline-block mx-1 text-dark" href="https://linkedin.com/in/{{ member[1].linkedin }}"><i class="fa-brands fa-linkedin"></i></a>
 					{% endif %}
 
-					{% if member.email %}
-					<a target="_blank" class="d-inline-block mx-1 text-dark" href="mailto:{{ member.email }}"><i class="fa-solid fa-envelope"></i></a>
+					{% if member[1].email %}
+					<a target="_blank" class="d-inline-block mx-1 text-dark" href="mailto:{{ member[1].email }}"><i class="fa-solid fa-envelope"></i></a>
 					{% endif %}
 
-					{% if member.github %}
-					<a target="_blank" class="d-inline-block mx-1 text-dark" href="https://github.com/{{ member.github }}"><i class="fa-brands fa-github"></i></a>
+					{% if member[1].github %}
+					<a target="_blank" class="d-inline-block mx-1 text-dark" href="https://github.com/{{ member[1].github }}"><i class="fa-brands fa-github"></i></a>
 					{% endif %}
 
-					{% if member.pdf %}
-					<a target="_blank" class="d-inline-block mx-1 text-dark" href="{{ member.pdf }}"><i class="fa-solid fa-file-pdf"></i></a>
+					{% if member[1].pdf %}
+					<a target="_blank" class="d-inline-block mx-1 text-dark" href="{{ member[1].pdf }}"><i class="fa-solid fa-file-pdf"></i></a>
 					{% endif %}
 				</p>
 			</div>
 			<div class="col-md-9">
-				<h3>{{ member.display_name }}</h3>
-				<p class="mt-3 mb-0">{{ member.description }}</p>
+				<h3>{% if member[1].display_name %}{{ member[1].display_name }} ({{ member[1].name }}){% else %}{{ member[1].name }}{% endif %}</h3>
+				<p class="mt-3 mb-0">{{ member[1].description }}</p>
 			</div>
 		</div>
 	</div>
