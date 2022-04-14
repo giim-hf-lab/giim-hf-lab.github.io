@@ -1,27 +1,34 @@
-- name: 钟震宇
-  display_name: 钟震宇
-  description: 团队负责人
-
-- name: 雷欢
-  display_name: 雷欢
+leader:
+  name: 钟震宇
+  description: "博士，研究员。2006年毕业于中国地质大学（武汉）安全信息工程专业。长期从事智能感知、模式识别及安全工程等专业技术领域研究工作。近5年主持广东省重点研发计划（新一代人工智能专项）、广东省重大专项、广州市重点领域研发计划（人工智能重大专项）等省市级项目近10项，参与国家、省部级项目20余项，获得国际先进水平科学技术成果1项，国内领先水平的科技成果1项。申请发明专利28 件，其中授权9 件；发表论文30余 篇、其中SCI近10 篇；先后获省市级科技奖励4 次。"
+hefeng:
+  name: 何峰
+huangtianlun:
+  name: 黄天仑
+leihuan:
+  name: 雷欢
   github: leihuan925
-
-- name: 焦泽昱
-  display_name: 焦泽昱
-
-- name: 陈再励
-  display_name: 陈再励
+jiaozeyu:
+  name: 焦泽昱
+chenzaili:
+  name: 陈再励
   github: WanderingLeeth
-
-- name: 马敬奇
-  display_name: 马敬奇
+lichentong:
+  name: 李辰潼
+majingqi:
+  name: 马敬奇
   github: laomaup
-
-- name: 赖庭晟
+wuliangsheng:
+  name: 吴亮生
+tinson:
+  name: 赖庭晟
   display_name: Tinson
-  web: https://cv.tinson.dev/zh-cn/
   email: me@tinson.dev
-  avatar: assets/avatars/tinson.png
   github: laitingsheng
   linkedin: laitingsheng
-  pdf: https://cv.tinson.dev/pdfs/jsonresume/zh-cn.pdf
+wangnan:
+  name: 王楠
+luxingjian:
+  name: 卢杏坚
+yangdanni:
+  name: 杨丹妮
