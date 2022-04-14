@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<link rel="icon" href="{{ site.baseurl }}/{{ site.logo }}">
+<link rel="icon" href="{{ site.baseurl }}/assets/images/logo.png">
 
 <title>{{ page.title }} | {{site.name}}</title>
 
@@ -13,6 +13,8 @@
 <link href="{{ site.baseurl }}/assets/css/prism.css" rel="stylesheet">
 
 <link href="{{ site.baseurl }}/assets/css/theme.css" rel="stylesheet">
+
+<link href="{{ site.baseurl }}/assets/css/custom.css" rel="stylesheet">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.1/css/all.css" integrity="sha384-/frq1SRXYH/bSyou/HUp/hib7RVN1TawQYja658FEOodR/FQBKVqT9Ol+Oz3Olq5" crossorigin="anonymous">
 
@@ -44,11 +46,11 @@
 
 	{% include search-lunr.html %}
 
-	<div class="site-content {% if page.url == '/' %} firstpage {% endif %}">
+	<div class="site-content{% if page.url == '/' %} firstpage{% endif %}">
 
 	<div class="container">
-		<a class="navbar-brand" href="{{ site.baseurl }}/">
-			<img src="{{ site.baseurl }}/{{ site.logo }}" alt="{{ site.name }}">
+		<a href="{{ site.baseurl }}/">
+			<img src="{{ site.baseurl }}/assets/images/logo-title.png" alt="{{ site.name }}">
 		</a>
 
 		{% if page.url == '/' %}
