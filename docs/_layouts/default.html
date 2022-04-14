@@ -14,108 +14,72 @@
 
 <link href="{{ site.baseurl }}/assets/css/theme.css" rel="stylesheet">
 
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.1/css/all.css" integrity="sha384-/frq1SRXYH/bSyou/HUp/hib7RVN1TawQYja658FEOodR/FQBKVqT9Ol+Oz3Olq5" crossorigin="anonymous"/>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.1/css/all.css" integrity="sha384-/frq1SRXYH/bSyou/HUp/hib7RVN1TawQYja658FEOodR/FQBKVqT9Ol+Oz3Olq5" crossorigin="anonymous">
 
 <script src="{{ site.baseurl }}/assets/js/jquery.min.js"></script>
 
 </head>
 
 {% capture layout %}{% if page.layout %}layout-{{ page.layout }}{% endif %}{% endcapture %}
+
 <body>
+	<div class="sidebar"></div>
 
-<!-- Begin Sidebar Navigation
-================================================== -->
+	<div class="nav-icon">
+		<div class="hamburger-bar"></div>
+	</div>
 
-<div class="sidebar">
-</div>
-<div class="nav-icon">
-	<div class="hamburger-bar"></div>
-</div>
-<div id="blackover-nav" class="blackover"></div>
-<nav id="menu">
-	<ul>
-		<h3>导航栏</h3>
-		<li><a href="{{ site.baseurl }}/">主页</a></li>
-		<li><a href="{{ site.baseurl }}/about">关于我们</a></li>
-		<li><a href="{{ site.baseurl }}/members">团队成员</a></li>
-		<li><a href="{{ site.baseurl }}/publications">学术论文</a></li>
-		<li><a href="{{ site.baseurl }}/solutions">解决方案</a></li>
-		<li><a href="{{ site.baseurl }}/achievements">科研成果</a></li>
-	</ul>
-</nav>
+	<div id="blackover-nav" class="blackover"></div>
 
-{% include search-lunr.html %}
+	<nav id="menu">
+		<ul>
+			<h3>导航栏</h3>
+			<li><a href="{{ site.baseurl }}/">主页</a></li>
+			<li><a href="{{ site.baseurl }}/about">关于我们</a></li>
+			<li><a href="{{ site.baseurl }}/members">团队成员</a></li>
+			<li><a href="{{ site.baseurl }}/publications">学术论文</a></li>
+			<li><a href="{{ site.baseurl }}/solutions">解决方案</a></li>
+			<li><a href="{{ site.baseurl }}/achievements">科研成果</a></li>
+		</ul>
+	</nav>
 
+	{% include search-lunr.html %}
 
-<!-- End Sidebar Navigation
-================================================== -->
+	<div class="site-content {% if page.url == '/' %} firstpage {% endif %}">
 
-<div class="site-content {% if page.url == '/' %} firstpage {% endif %}">
+	<div class="container">
+		<a class="navbar-brand" href="{{ site.baseurl }}/">
+			<img src="{{ site.baseurl }}/{{ site.logo }}" alt="{{ site.name }}">
+		</a>
 
-<div class="container">
-
-	<!-- Site Logo/Name
-	================================================== -->
-
-	<a class="navbar-brand" href="{{ site.baseurl }}/">
-		<img src="{{ site.baseurl }}/{{ site.logo }}" alt="{{ site.name }}">
-	</a>
-
-
-	<!-- Site Tag
-	================================================== -->
-	{% if page.url == '/' %}
+		{% if page.url == '/' %}
 		<p class="sitetag">
 			{{ site.description }}
 		</p>
-	{% endif %}
+		{% endif %}
 
-	<!-- Content
-	================================================== -->
-	<div class="main-content">
-		{{ content }}
-	</div>
-
-	{% if site.mailchimp-list %}
-	<!-- Newsletter
-	================================================== -->
-	<div class="newsletter text-center">
-		<span class="h4"><img src="{{ site.baseurl }}/{{ site.logo }}" class="newsletter-logo" alt="{{site.title}}"> &nbsp; Never miss a <b>story</b> from us, subscribe to our newsletter</span>
-		<form action="{{site.mailchimp-list}}" method="post" name="mc-embedded-subscribe-form" class="wj-contact-form validate" target="_blank" novalidate>
-			<div class="mc-field-group d-inline-flex">
-			<input type="email" placeholder="Your e-mail" name="EMAIL" class="required email" id="mce-EMAIL" autocomplete="on" required>
-			<input type="submit" value="Subscribe" name="subscribe" class="heart">
-			</div>
-		</form>
-	</div>
-	{% endif %}
-
-</div>
-
-<!-- Begin Footer
-================================================== -->
-<footer class="footer">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-6 col-sm-12 text-center text-lg-left">
-				Copyright © {{ site.time | date: "%Y" }} {{ site.name }}
-			</div>
-			<div class="col-md-6 col-sm-12 text-center text-lg-right">
-				Powered by
-				<a target="_blank" href="https://pages.github.com/">GitHub Pages</a>
-				with
-				<a target="_blank" href="https://www.wowthemes.net/memoirs-free-jekyll-theme/">Memoirs Jekyll Theme designed by WowThemes.net</a>
-			</div>
+		<div class="main-content">
+			{{ content }}
 		</div>
 	</div>
-</footer>
-<!-- End Footer
-================================================== -->
 
-</div> <!-- /.site-content -->
+	<footer class="footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6 col-sm-12 text-center text-lg-left">
+					Copyright © {{ site.time | date: "%Y" }} {{ site.name }}
+				</div>
+				<div class="col-md-6 col-sm-12 text-center text-lg-right">
+					Powered by
+					<a target="_blank" href="https://pages.github.com/">GitHub Pages</a>
+					with
+					<a target="_blank" href="https://www.wowthemes.net/memoirs-free-jekyll-theme/">Memoirs Jekyll Theme designed by WowThemes.net</a>
+				</div>
+			</div>
+		</div>
+	</footer>
 
-<!-- Scripts (if you need bootstrap.js, please add it yourself. I didn't use it for performance reasons, it was not needed in this theme)
-================================================== -->
+</div>
 
 <script src="{{ site.baseurl }}/assets/js/prism.js"></script>
 
