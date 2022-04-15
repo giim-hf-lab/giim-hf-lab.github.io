@@ -11,16 +11,12 @@
 
 {% seo %}
 
-<link href="{{ site.baseurl }}/assets/css/fontawesome.css" rel="stylesheet">
+<link href="{{ site.baseurl }}/assets/css/fontawesome.all.min.css" rel="stylesheet">
 <link href="{{ site.baseurl }}/assets/css/prism.css" rel="stylesheet">
 <link href="{{ site.baseurl }}/assets/css/theme.css" rel="stylesheet">
 
 <script src="{{ site.baseurl }}/assets/js/jquery.min.js"></script>
-<script defer src="{{ site.baseurl }}/assets/js/bootstrap.bundle.min.js"></script>
 <script defer src="{{ site.baseurl }}/assets/js/prism.js"></script>
-{% if site.lazyimages == "enabled" %}
-<script defer src="{{ site.baseurl }}/assets/js/lazyload.js"></script>
-{% endif %}
 <script src="{{ site.baseurl }}/assets/js/theme.js"></script>
 
 </head>
@@ -47,20 +43,12 @@
 			</ul>
 		</nav>
 
-		{% include search-lunr.html %}
-
 		<div class="site-content{% if page.url == '/' %} firstpage{% endif %}">
 
 		<div class="container">
 			<a href="{{ site.baseurl }}/">
 				<img src="{{ site.baseurl }}/assets/images/logo-title.png" alt="{{ site.name }}">
 			</a>
-
-			{% if page.url == '/' %}
-			<p class="sitetag">
-				{{ site.description }}
-			</p>
-			{% endif %}
 
 			<div class="main-content">
 				{{ content }}
