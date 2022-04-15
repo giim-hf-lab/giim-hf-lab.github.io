@@ -11,3 +11,14 @@ updates:
     labels:
       - dependabot
       - enhancement
+  - package-ecosystem: bundler
+    directory: /docs
+    schedule:
+      interval: daily
+    reviewers:
+      - laitingsheng
+    assignees:
+      - laitingsheng
+    labels:
+      - dependabot
+      - enhancement
