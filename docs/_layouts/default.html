@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -11,14 +12,17 @@
 {% seo %}
 
 <link href="{{ site.baseurl }}/assets/css/prism.css" rel="stylesheet">
-
 <link href="{{ site.baseurl }}/assets/css/theme.css" rel="stylesheet">
-
-<link href="{{ site.baseurl }}/assets/css/custom.css" rel="stylesheet">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.1/css/all.css" integrity="sha384-/frq1SRXYH/bSyou/HUp/hib7RVN1TawQYja658FEOodR/FQBKVqT9Ol+Oz3Olq5" crossorigin="anonymous">
 
 <script src="{{ site.baseurl }}/assets/js/jquery.min.js"></script>
+<script defer src="{{ site.baseurl }}/assets/js/bootstrap.bundle.min.js"></script>
+<script defer src="{{ site.baseurl }}/assets/js/prism.js"></script>
+{% if site.lazyimages == "enabled" %}
+<script defer src="{{ site.baseurl }}/assets/js/lazyload.js"></script>
+{% endif %}
+<script src="{{ site.baseurl }}/assets/js/theme.js"></script>
 
 </head>
 
@@ -33,66 +37,53 @@
 
 	<div id="blackover-nav" class="blackover"></div>
 
-	<nav id="menu">
-		<ul>
-			<h3>导航栏</h3>
-			<li><a href="{{ site.baseurl }}/">主页</a></li>
-			<li><a href="{{ site.baseurl }}/members">团队成员</a></li>
-			<li><a href="{{ site.baseurl }}/publications">学术论文</a></li>
-			<li><a href="{{ site.baseurl }}/solutions">解决方案</a></li>
-			<li><a href="{{ site.baseurl }}/achievements">科研成果</a></li>
-		</ul>
-	</nav>
+		<nav id="menu">
+			<ul>
+				<h3>导航栏</h3>
+				<li><a href="{{ site.baseurl }}/">主页</a></li>
+				<li><a href="{{ site.baseurl }}/members">团队成员</a></li>
+				<li><a href="{{ site.baseurl }}/publications">学术论文</a></li>
+				<li><a href="{{ site.baseurl }}/solutions">解决方案</a></li>
+				<li><a href="{{ site.baseurl }}/achievements">科研成果</a></li>
+			</ul>
+		</nav>
 
-	{% include search-lunr.html %}
+		{% include search-lunr.html %}
 
-	<div class="site-content{% if page.url == '/' %} firstpage{% endif %}">
+		<div class="site-content{% if page.url == '/' %} firstpage{% endif %}">
 
-	<div class="container">
-		<a href="{{ site.baseurl }}/">
-			<img src="{{ site.baseurl }}/assets/images/logo-title.png" alt="{{ site.name }}">
-		</a>
-
-		{% if page.url == '/' %}
-		<p class="sitetag">
-			{{ site.description }}
-		</p>
-		{% endif %}
-
-		<div class="main-content">
-			{{ content }}
-		</div>
-	</div>
-
-	<footer class="footer">
 		<div class="container">
-			<div class="row">
-				<div class="col-md-6 col-sm-12 text-center text-lg-left">
-					Copyright © {{ site.time | date: "%Y" }} {{ site.name }}
-				</div>
-				<div class="col-md-6 col-sm-12 text-center text-lg-right">
-					Powered by
-					<a target="_blank" href="https://pages.github.com/">GitHub Pages</a>
-					with
-					<a target="_blank" href="https://www.wowthemes.net/memoirs-free-jekyll-theme/">Memoirs Jekyll Theme</a>
-				</div>
+			<a href="{{ site.baseurl }}/">
+				<img src="{{ site.baseurl }}/assets/images/logo-title.png" alt="{{ site.name }}">
+			</a>
+
+			{% if page.url == '/' %}
+			<p class="sitetag">
+				{{ site.description }}
+			</p>
+			{% endif %}
+
+			<div class="main-content">
+				{{ content }}
 			</div>
 		</div>
-	</footer>
 
-</div>
-
-<script src="{{ site.baseurl }}/assets/js/prism.js"></script>
-
-<script src="{{ site.baseurl }}/assets/js/theme.js"></script>
-
-{% if site.lazyimages == "enabled" %}
-<script src="{{ site.baseurl }}/assets/js/lazyload.js"></script>
-{% endif %}
-
-{% if page.layout == 'post' %}
-<script id="dsq-count-scr" src="//{{site.disqus}}.disqus.com/count.js"></script>
-{% endif %}
-
+		<footer class="footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6 col-sm-12 text-center text-lg-left">
+						Copyright © {{ site.time | date: "%Y" }} {{ site.name }}
+					</div>
+					<div class="col-md-6 col-sm-12 text-center text-lg-right">
+						Powered by
+						<a target="_blank" href="https://pages.github.com/">GitHub Pages</a>
+						with
+						<a target="_blank" href="https://www.wowthemes.net/memoirs-free-jekyll-theme/">Memoirs Jekyll Theme</a>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
 </body>
+
 </html>
