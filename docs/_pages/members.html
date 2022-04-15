@@ -9,7 +9,7 @@ comments: false
 	<div id="{{ member[1].name }}" class="authorbox position-relative pb-5 pt-5 mb-4 mt-4 border">
 		<div class="row">
 			<div class="wrapavname col-md-3 text-center">
-				<img class="author-thumb" src="{{site.baseurl}}/assets/avatars/{{ member[0] }}.png" alt="{{ member.display_name }}">
+				<img class="author-thumb" src="{{site.baseurl}}/assets/avatars/{{ member[0] }}.png" alt="{{ member.name }}">
 				<p class="mt-4 mb-0 small text-center">
 					{% if member[1].web %}
 					<a target="_blank" class="d-inline-block mx-1 text-dark" href="{{ member[1].web }}"><i class="fa-solid fa-link"></i></a>
@@ -33,7 +33,7 @@ comments: false
 				</p>
 			</div>
 			<div class="col-md-9">
-				<h3>{{ member[1].display_name }}{% if member[1].name != member[1].display_name %} ({{ member[1].name }}){% endif %}</h3>
+				<h3>{% if member[1].display_name %}{{ member[1].display_name }} ({{ member[1].name }}){% else %}{{ member[1].name }}{% endif %}</h3>
 				<p class="mt-3 mb-0">{{ member[1].description }}</p>
 			</div>
 		</div>
