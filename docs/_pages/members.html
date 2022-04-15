@@ -6,7 +6,7 @@ comments: false
 ---
 <div class="list-authors mt-5">
 	{% for member in site.data.members %}
-	<div id="{{ member[1].name }}" class="authorbox position-relative pb-5 pt-5 mb-4 mt-4 border">
+	<div id="{{ member[0] }}" class="authorbox position-relative pb-5 pt-5 mb-4 mt-4 border">
 		<div class="row">
 			<div class="wrapavname col-md-3 text-center">
 				<img class="author-thumb" src="{{site.baseurl}}/assets/avatars/{{ member[0] }}.png" alt="{{ member.name }}">
