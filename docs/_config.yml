@@ -12,4 +12,22 @@ plugins:
   - jekyll-archives
   - jekyll-figure
 
-remote_theme: wowthemesnet/jekyll-theme-memoirs
+jekyll-archives:
+  enabled:
+    - categories
+  layout: archive
+  permalinks:
+    category: '/category/:name/'
+
+highlighter: none
+markdown: kramdown
+kramdown:
+  syntax_highlighter_opts:
+    disable : true
+
+sass:
+  sass_dir: _sass
+  style: compressed
+
+exclude:
+  - CNAME
