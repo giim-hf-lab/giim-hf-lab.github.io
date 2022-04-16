@@ -2,75 +2,90 @@
 <html lang="en">
 
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
-<link rel="icon" href="{{ site.baseurl }}/assets/images/logo.png">
+  <title>{{ page.title }} - {{ site.name }}</title>
 
-<title>{{ page.title }} | {{site.name}}</title>
+  {% seo %}
 
-{% seo %}
+  <link href="{{ site.baseurl }}/assets/images/logo.png" rel="icon" />
 
-<link href="{{ site.baseurl }}/assets/css/fontawesome.all.min.css" rel="stylesheet">
-<link href="{{ site.baseurl }}/assets/css/prism.css" rel="stylesheet">
-<link href="{{ site.baseurl }}/assets/css/theme.css" rel="stylesheet">
-
-<script src="{{ site.baseurl }}/assets/js/jquery.min.js"></script>
-<script defer src="{{ site.baseurl }}/assets/js/prism.js"></script>
-<script src="{{ site.baseurl }}/assets/js/theme.js"></script>
-
+  <link href="{{ site.baseurl }}/assets/css/fontawesome.all.min.css" rel="stylesheet" />
+  <link href="{{ site.baseurl }}/assets/css/mdb.min.css" rel="stylesheet" />
+  <link href="{{ site.baseurl }}/assets/css/prism.css" rel="stylesheet" />
+  <link href="{{ site.baseurl }}/assets/css/custom.css" rel="stylesheet" />
 </head>
 
 {% capture layout %}{% if page.layout %}layout-{{ page.layout }}{% endif %}{% endcapture %}
 
 <body>
-	<div class="sidebar"></div>
 
-	<div class="nav-icon">
-		<div class="hamburger-bar"></div>
-	</div>
+<header>
+  <nav class="navbar navbar-expand-lg navbar-dark d-none d-lg-block" style="z-index: 2000;">
+    <div class="container-fluid">
+      <a class="navbar-brand nav-link" target="_blank" href="http://giim.ac.cn/">
+        <img src="{{ site.baseurl }}/assets/images/logo.png" alt="logo" height="30" />
+      </a>
 
-	<div id="blackover-nav" class="blackover"></div>
+      <button class="navbar-toggler"
+              type="button"
+              data-mdb-toggle="collapse"
+              data-mdb-target="#navbarExample01"
+              aria-controls="navbarExample01"
+              aria-expanded="false"
+              aria-label="Toggle navigation">
+        <i class="fa-solid fa-bars"></i>
+      </button>
 
-		<nav id="menu">
-			<ul>
-				<h3>导航栏</h3>
-				<li><a href="{{ site.baseurl }}/">主页</a></li>
-				<li><a href="{{ site.baseurl }}/members">团队成员</a></li>
-				<li><a href="{{ site.baseurl }}/publications">学术论文</a></li>
-				<li><a href="{{ site.baseurl }}/solutions">解决方案</a></li>
-				<li><a href="{{ site.baseurl }}/achievements">科研成果</a></li>
-			</ul>
-		</nav>
+      <div class="collapse navbar-collapse" id="navbarExample01">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item active">
+            <a class="nav-link" href="{{ site.baseurl }}/">主页</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ site.baseurl }}/members">团队成员</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ site.baseurl }}/publications">学术论文</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ site.baseurl }}/achievements">科研成果</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="{{ site.baseurl }}/about">关于我们</a>
+          </li>
+        </ul>
 
-		<div class="site-content{% if page.url == '/' %} firstpage{% endif %}">
+        <ul class="navbar-nav list-inline">
+          <li class="nav-item">
+            <a class="nav-link" target="_blank" rel="nofollow" href="https://github.com/giim-hf-lab">
+              <i class="fa-brands fa-github"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div id="intro" class="bg-image vh-100 shadow-1-strong">
+    <img src="{{ site.baseurl }}/assets/images/background/{{ page.background_image_uri | default: "default.jpg" }}" alt="background" />
+  </div>
+</header>
 
-		<div class="container">
-			<a href="{{ site.baseurl }}/">
-				<img src="{{ site.baseurl }}/assets/images/logo-title.png" alt="{{ site.name }}">
-			</a>
+<main class="mt-5">
+  {{ content }}
+</main>
 
-			<div class="main-content">
-				{{ content }}
-			</div>
-		</div>
+<footer class="bg-light text-lg-start">
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+    Copyright © {{ site.time | date: "%Y" }} <a href="{{ site.baseurl }}/">{{ site.name }}</a>
+  </div>
+</footer>
 
-		<footer class="footer">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-6 col-sm-12 text-center text-lg-left">
-						Copyright © {{ site.time | date: "%Y" }} {{ site.name }}
-					</div>
-					<div class="col-md-6 col-sm-12 text-center text-lg-right">
-						Powered by
-						<a target="_blank" href="https://pages.github.com/">GitHub Pages</a>
-						with
-						<a target="_blank" href="https://www.wowthemes.net/memoirs-free-jekyll-theme/">Memoirs Jekyll Theme</a>
-					</div>
-				</div>
-			</div>
-		</footer>
-	</div>
+<script src="{{ site.baseurl }}/assets/js/jquery.min.js"></script>
+<script src="{{ site.baseurl }}/assets/js/prism.js"></script>
+<script src="{{ site.baseurl }}/assets/js/mdb.min.js"></script>
+
 </body>
 
 </html>
