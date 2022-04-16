@@ -12,10 +12,14 @@ header {
   }
 }
 
-main {
-  .author-box {
-    .author-thumb {
-      width: 100%;
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Microsoft YaHei", sans-serif;
+
+  main {
+    .author-box {
+      .author-thumb {
+        width: 100%;
+      }
     }
   }
 }
