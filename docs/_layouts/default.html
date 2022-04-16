@@ -22,7 +22,7 @@
 <body>
 
 <header>
-  <nav class="navbar navbar-expand-lg navbar-dark d-none d-lg-block">
+  <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
     <div class="container-fluid">
       <a class="navbar-brand nav-link" target="_blank" href="http://giim.ac.cn/">
         <img src="{{ site.baseurl }}/assets/images/logo.png" alt="logo" height="30" />
@@ -31,29 +31,29 @@
       <button class="navbar-toggler"
               type="button"
               data-mdb-toggle="collapse"
-              data-mdb-target="#navbarExample01"
-              aria-controls="navbarExample01"
+              data-mdb-target="#top-navbar"
+              aria-controls="top-navbar"
               aria-expanded="false"
               aria-label="Toggle navigation">
         <i class="fa-solid fa-bars"></i>
       </button>
 
-      <div class="collapse navbar-collapse" id="navbarExample01">
+      <div class="collapse navbar-collapse" id="top-navbar">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" href="{{ site.baseurl }}/">主页</a>
+            <a class="nav-link mx-1 active" href="{{ site.baseurl }}/">主页</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{{ site.baseurl }}/members">团队成员</a>
+            <a class="nav-link mx-1" href="{{ site.baseurl }}/members">团队成员</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{{ site.baseurl }}/publications">学术论文</a>
+            <a class="nav-link mx-1" href="{{ site.baseurl }}/publications">学术论文</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{{ site.baseurl }}/achievements">科研成果</a>
+            <a class="nav-link mx-1" href="{{ site.baseurl }}/achievements">科研成果</a>
           </li>
           <li class="nav-item active">
-            <a class="nav-link" href="{{ site.baseurl }}/about">关于我们</a>
+            <a class="nav-link mx-1" href="{{ site.baseurl }}/about">关于我们</a>
           </li>
         </ul>
 
@@ -67,8 +67,8 @@
       </div>
     </div>
   </nav>
-  <div id="header-background" class="bg-image shadow-1-strong">
-    <img src="{{ site.baseurl }}/assets/images/background/{{ page.background_image_uri | default: "default.jpg" }}" alt="background" />
+  <div class="text-center bg-light" id="header-title">
+    <img class="m-0" src="{{ site.baseurl }}/assets/images/logo-title.png" alt="background" />
   </div>
 </header>
 
