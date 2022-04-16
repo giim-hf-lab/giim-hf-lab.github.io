@@ -2,13 +2,25 @@
 
 ---
 
-@media (min-width: 992px) {
-  #intro {
+header {
+  .navbar {
+    z-index: 2000 !important;
+
+    .nav-link {
+      color: #fff !important;
+    }
+  }
+
+  #header-background {
     margin-top: -58.59px;
     height: 40vh !important;
   }
 }
 
-.navbar .nav-link {
-  color: #fff !important;
+main {
+  .author-box {
+    .author-thumb {
+      width: 100%;
+    }
+  }
 }
