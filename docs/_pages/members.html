@@ -5,40 +5,38 @@ permalink: /members
 comments: false
 ---
 
-<main class="my-5 container">
-  {% for member in site.data.members %}
-  <div id="{{ member[0] }}" class="card my-5 author-box">
-    <div class="row">
-      <div class="col-2">
-        <img class="author-thumb" src="{{ site.baseurl }}/assets/avatars/{{ member[0] }}.png" alt="{{ member.name }}" />
-      </div>
-      <div class="col-10">
-        <h3 class="mt-3">{% if member[1].display_name %}{{ member[1].display_name }} ({{ member[1].name }}){% else %}{{ member[1].name }}{% endif %}</h3>
-        <hr />
-        <p class="mt-3">{{ member[1].description }}</p>
-        <p class="my-3">
-          {% if member[1].web %}
-          <a target="_blank" class="d-inline-block mx-1 text-dark" href="{{ member[1].web }}"><i class="fa-solid fa-link"></i></a>
-          {% endif %}
+{% for member in site.data.members %}
+<div id="{{ member[0] }}" class="card my-5 author-box">
+  <div class="row">
+    <div class="col-2">
+      <img class="author-thumb" src="{{ site.baseurl }}/assets/avatars/{{ member[0] }}.png" alt="{{ member.name }}" />
+    </div>
+    <div class="col-10">
+      <h3 class="mt-3">{% if member[1].display_name %}{{ member[1].display_name }} ({{ member[1].name }}){% else %}{{ member[1].name }}{% endif %}</h3>
+      <hr />
+      <p class="mt-3">{{ member[1].description }}</p>
+      <p class="my-3">
+        {% if member[1].web %}
+        <a target="_blank" class="d-inline-block mx-1 text-dark" href="{{ member[1].web }}"><i class="fa-solid fa-link"></i></a>
+        {% endif %}
 
-          {% if member[1].linkedin %}
-          <a target="_blank" class="d-inline-block mx-1 text-dark" href="https://linkedin.com/in/{{ member[1].linkedin }}"><i class="fa-brands fa-linkedin"></i></a>
-          {% endif %}
+        {% if member[1].linkedin %}
+        <a target="_blank" class="d-inline-block mx-1 text-dark" href="https://linkedin.com/in/{{ member[1].linkedin }}"><i class="fa-brands fa-linkedin"></i></a>
+        {% endif %}
 
-          {% if member[1].email %}
-          <a target="_blank" class="d-inline-block mx-1 text-dark" href="mailto:{{ member[1].email }}"><i class="fa-solid fa-envelope"></i></a>
-          {% endif %}
+        {% if member[1].email %}
+        <a target="_blank" class="d-inline-block mx-1 text-dark" href="mailto:{{ member[1].email }}"><i class="fa-solid fa-envelope"></i></a>
+        {% endif %}
 
-          {% if member[1].github %}
-          <a target="_blank" class="d-inline-block mx-1 text-dark" href="https://github.com/{{ member[1].github }}"><i class="fa-brands fa-github"></i></a>
-          {% endif %}
+        {% if member[1].github %}
+        <a target="_blank" class="d-inline-block mx-1 text-dark" href="https://github.com/{{ member[1].github }}"><i class="fa-brands fa-github"></i></a>
+        {% endif %}
 
-          {% if member[1].pdf %}
-          <a target="_blank" class="d-inline-block mx-1 text-dark" href="{{ member[1].pdf }}"><i class="fa-solid fa-file-pdf"></i></a>
-          {% endif %}
-        </p>
-      </div>
+        {% if member[1].pdf %}
+        <a target="_blank" class="d-inline-block mx-1 text-dark" href="{{ member[1].pdf }}"><i class="fa-solid fa-file-pdf"></i></a>
+        {% endif %}
+      </p>
     </div>
   </div>
-  {% endfor %}
-</main>
+</div>
+{% endfor %}
