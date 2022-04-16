@@ -3,17 +3,12 @@
 ---
 
 header {
-  .navbar {
-    z-index: 2000 !important;
-
-    .nav-link {
-      color: #fff !important;
+  #header-title {
+    margin-top: 60px;
+    img {
+      max-height: 200px;
+      max-width: 100vw;
     }
-  }
-
-  #header-background {
-    margin-top: -58.59px;
-    height: 40vh !important;
   }
 }
 
