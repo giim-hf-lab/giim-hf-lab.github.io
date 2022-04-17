@@ -1,4 +1,4 @@
-name: build_jsonresume
+name: Build JSON Resume
 on:
   push:
     branches:
