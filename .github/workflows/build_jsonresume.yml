@@ -1,0 +1,21 @@
+name: build_jsonresume
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - .github/workflows/build_jsonresume.yml
+      - ci/build_jsonresume.sh
+      - ci/template/jsonresume.html.header
+      - jsonresume/**
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: "16"
+      - run: npm install
+        working-directory: jsonresume
+      - run: bash ci/build_jsonresume.sh

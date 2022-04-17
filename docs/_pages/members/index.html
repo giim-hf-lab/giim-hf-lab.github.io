@@ -16,24 +16,22 @@ main_id: members
       <hr />
       <p class="mt-3">{{ member[1].description }}</p>
       <p class="my-3">
-        {% if member[1].web %}
-        <a target="_blank" class="d-inline-block mx-1 text-dark" href="{{ member[1].web }}"><i class="fa-solid fa-link"></i></a>
-        {% endif %}
-
         {% if member[1].linkedin %}
         <a target="_blank" class="d-inline-block mx-1 text-dark" href="https://linkedin.com/in/{{ member[1].linkedin }}"><i class="fa-brands fa-linkedin"></i></a>
         {% endif %}
-
         {% if member[1].email %}
         <a target="_blank" class="d-inline-block mx-1 text-dark" href="mailto:{{ member[1].email }}"><i class="fa-solid fa-envelope"></i></a>
         {% endif %}
-
         {% if member[1].github %}
         <a target="_blank" class="d-inline-block mx-1 text-dark" href="https://github.com/{{ member[1].github }}"><i class="fa-brands fa-github"></i></a>
         {% endif %}
-
-        {% if member[1].pdf %}
-        <a target="_blank" class="d-inline-block mx-1 text-dark" href="{{ member[1].pdf }}"><i class="fa-solid fa-file-pdf"></i></a>
+        {% assign cv = member[1].cv %}
+        {% if cv %}
+        <a class="d-inline-block mx-1 text-dark" target="_blank" href="{{ cv.link }}"><i class="fa-solid fa-link"></i></a>
+        <a class="d-inline-block mx-1 text-dark" target="_blank" href="{{ cv.pdf }}"><i class="fa-solid fa-file-pdf"></i></a>
+        {% else %}
+        <a class="d-inline-block mx-1 text-dark" target="_blank" href="{{ site.baseurl | append: "/members/" | append: member[0] }}"><i class="fa-solid fa-link"></i></a>
+        <a class="d-inline-block mx-1 text-dark" target="_blank" href="{{ site.baseurl | append: "/assets/pdfs/members/" | append: member[0] | append: ".pdf" }}"><i class="fa-solid fa-file-pdf"></i></a>
         {% endif %}
       </p>
     </div>
