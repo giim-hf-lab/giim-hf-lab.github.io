@@ -28,7 +28,8 @@
         <img src="{{ site.baseurl }}/assets/images/logo.png" alt="logo" height="30" />
       </a>
 
-      <button class="navbar-toggler"
+      <button id="top-navbar-toggle"
+              class="navbar-toggler"
               type="button"
               data-mdb-toggle="collapse"
               data-mdb-target="#top-navbar"
@@ -38,7 +39,7 @@
         <i class="fa-solid fa-bars"></i>
       </button>
 
-      <div class="collapse navbar-collapse" id="top-navbar">
+      <div id="top-navbar" class="collapse navbar-collapse" aria-labelledby="top-navbar-toggle">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
             <a class="nav-link mx-1 active" href="{{ site.baseurl }}/">主页</a>
@@ -48,6 +49,23 @@
           </li>
           <li class="nav-item">
             <a class="nav-link mx-1" href="{{ site.baseurl }}/publications">学术论文</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a id="top-navbar-solutions-toggle"
+               class="nav-link mx-1 dropdown-toggle"
+               type="button"
+               data-mdb-toggle="dropdown"
+               data-mdb-target="top-navbar-solutions"
+               aria-controls="top-navbar-solutions"
+               aria-expanded="false"
+               aria-label="Toggle solutions navigation">
+              解决方案
+            </a>
+            <ul id="top-navbar-solutions" class="dropdown-menu" aria-labelledby="top-navbar-solutions-toggle">
+              <li>
+                <a class="dropdown-item" href="{{ site.baseurl }}/solutions/governance">智慧治理</a>
+              </li>
+            </ul>
           </li>
           <li class="nav-item">
             <a class="nav-link mx-1" href="{{ site.baseurl }}/achievements">科研成果</a>
@@ -67,17 +85,15 @@
       </div>
     </div>
   </nav>
-  <div class="text-center bg-light" id="header-title">
+  <div id="header-title" class="text-center bg-light">
     <img class="m-0" src="{{ site.baseurl }}/assets/images/logo-title.png" alt="background" />
   </div>
 </header>
 
-<main class="my-5 container">{{ content }}</main>
+<main{% if page.main_id %} id="main-{{ page.main_id }}"{% endif %} class="my-5 container">{{ content }}</main>
 
-<footer class="bg-light text-lg-start">
-  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-    Copyright © {{ site.time | date: "%Y" }} <a href="{{ site.baseurl }}/">{{ site.name }}</a>
-  </div>
+<footer class="bg-light text-center p-3">
+  Copyright © {{ site.time | date: "%Y" }} <a href="{{ site.baseurl }}/">{{ site.name }}</a>
 </footer>
 
 <script src="{{ site.baseurl }}/assets/js/jquery.min.js"></script>
