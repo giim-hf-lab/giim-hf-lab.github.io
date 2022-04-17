@@ -1,0 +1,7 @@
+---
+title: Bayberry segmentation in a complex environment based on a multi-module convolutional neural network
+tags:
+  - SCI
+thumbnail_type: png
+---
+Automatic bayberry picking can substantially reduce labor costs and improve picking efficiency in an orchard management system. Nowadays, an automatic picking system mainly relies on machine vision to segment bayberry fruit from the background. Most existing methods are carried out in an environment where the light intensity is relatively fixed and the bayberries are unobstructed. However, due to the complexity of the growing environment, including variations in lighting and widespread occlusion, segmentation accuracy is quite limited, which affects the large-scale application of automatic picking systems. Aiming at these issues, in this study, a bayberry segmentation method based on a multi-module convolutional neural network is proposed. First, the bayberry images in a real scene were collected and preprocessed to form a dataset. Then, a convolutional neural network was constructed, with an image correction module to improve the network’s robustness to natural ambient lighting. Finally, a shape completion module with a puzzle algorithm was utilized to overcome the occlusion in the natural environment. The experimental results show that the average precision of the proposed method for semantic segmentation and instance segmentation of bayberry fruit can reach 0.913 and 0.755, respectively, which outperforms the existing methods and has important significance for automatic picking in orchards.
