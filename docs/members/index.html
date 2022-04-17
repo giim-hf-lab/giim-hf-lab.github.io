@@ -1,7 +1,6 @@
 ---
 layout: default
 title: 团队成员
-permalink: /members
 main_id: members
 ---
 
@@ -9,7 +8,7 @@ main_id: members
 <div id="{{ member[0] }}" class="card my-3 author-box">
   <div class="row">
     <div class="col-2">
-      <img class="author-thumb" src="{{ site.baseurl }}/assets/avatars/{{ member[0] }}.png" alt="{{ member.name }}" />
+      <img class="img-fluid author-thumb" src="{{ site.baseurl }}/assets/avatars/{{ member[0] }}.png" alt="{{ member.name }}" />
     </div>
     <div class="col-10">
       <h3 class="mt-3">{% if member[1].display_name %}{{ member[1].display_name }} ({{ member[1].name }}){% else %}{{ member[1].name }}{% endif %}</h3>
