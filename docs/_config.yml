@@ -1,15 +1,9 @@
 name: 广东省科学院智能制造研究所人因工程团队
 title: 广东省科学院智能制造研究所人因工程团队
-include:
-  - _pages
 
 plugins:
-  - jekyll-paginate
   - jekyll-sitemap
-  - jekyll-feed
   - jekyll-seo-tag
-  - jekyll-archives
-  - jekyll-figure
 
 jekyll-archives:
   enabled:
