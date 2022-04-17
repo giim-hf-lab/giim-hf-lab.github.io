@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no" />
 
   <title>{{ page.title }} - {{ site.name }}</title>
 
@@ -48,8 +48,24 @@
           <li class="nav-item">
             <a class="nav-link mx-1" href="{{ site.baseurl }}/members">团队成员</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link mx-1" href="{{ site.baseurl }}/publications">学术论文</a>
+          <li class="nav-item dropdown">
+            <a id="top-navbar-publications-toggle"
+               class="nav-link mx-1 dropdown-toggle"
+               type="button"
+               data-mdb-toggle="dropdown"
+               data-mdb-target="top-navbar-publications"
+               aria-controls="top-navbar-publications"
+               aria-expanded="false"
+               aria-label="Toggle solutions navigation">
+              学术论文
+            </a>
+            <ul id="top-navbar-publications" class="dropdown-menu" aria-labelledby="top-navbar-publications-toggle">
+              <li>
+                <a class="dropdown-item" href="{{ site.baseurl }}/publications/sci-journals">SCI文章</a>
+                <a class="dropdown-item" href="{{ site.baseurl }}/publications/journals">期刊文章</a>
+                <a class="dropdown-item" href="{{ site.baseurl }}/publications/conferences">大会文章</a>
+              </li>
+            </ul>
           </li>
           <li class="nav-item dropdown">
             <a id="top-navbar-solutions-toggle"

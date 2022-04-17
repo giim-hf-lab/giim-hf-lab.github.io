@@ -4,6 +4,11 @@ title: 广东省科学院智能制造研究所人因工程团队
 defaults:
   - scope:
       path: ""
+      type: pages
+    values:
+      layout: default
+  - scope:
+      path: ""
       type: posts
     values:
       layout: post
