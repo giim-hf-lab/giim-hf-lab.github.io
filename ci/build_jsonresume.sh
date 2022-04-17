@@ -14,7 +14,7 @@ do
 	npm run build:pdf
 	npm run build:html
 
-	cat "${GITHUB_WORKSPACE}/ci/template/jsonresume.html.header" | sed "s/%PEOPLE%/${people}/g" | cat - resume.html > "${GITHUB_WORKSPACE}/docs/_pages/members/${people}.html"
+	cat "${GITHUB_WORKSPACE}/ci/template/jsonresume.html.header" | sed "s/%PEOPLE%/${people}/g" | cat - resume.html > "${GITHUB_WORKSPACE}/docs/members/${people}.html"
 	rm resume.html
 	mv resume.pdf "${GITHUB_WORKSPACE}/docs/assets/pdfs/members/${people}.pdf"
 done
