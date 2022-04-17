@@ -17,9 +17,15 @@ body {
 
   main#main-members {
     .author-box {
-      .author-thumb {
+      img.author-thumb {
         width: 100%;
       }
+    }
+  }
+
+  main#main-about {
+    img {
+      width: 100%;
     }
   }
 
