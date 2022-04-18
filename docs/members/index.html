@@ -24,12 +24,10 @@ main_id: members
         <a target="_blank" class="d-inline-block mx-1 text-dark" rel="opener external" href="https://github.com/{{ member[1].github }}"><i class="fa-brands fa-github"></i></a>
         {% endif %}
         {% assign cv = member[1].cv %}
-        {% if cv %}
-        <a class="d-inline-block mx-1 text-dark" target="_blank" rel="opener external" href="{{ cv.link }}"><i class="fa-solid fa-link"></i></a>
-        <a class="d-inline-block mx-1 text-dark" target="_blank" rel="opener external" href="{{ cv.pdf }}"><i class="fa-solid fa-file-pdf"></i></a>
+        {% if member[1].cv %}
+        <a class="d-inline-block mx-1 text-dark" target="_blank" rel="opener external" href="{{ member[1].cv }}"><i class="fa-solid fa-link"></i></a>
         {% else %}
-        <a class="d-inline-block mx-1 text-dark" target="_blank" rel="opener" href="{{ site.baseurl | append: "/members/" | append: member[0] }}"><i class="fa-solid fa-link"></i></a>
-        <a class="d-inline-block mx-1 text-dark" target="_blank" rel="opener" href="{{ site.baseurl | append: "/assets/pdfs/members/" | append: member[0] | append: ".pdf" }}"><i class="fa-solid fa-file-pdf"></i></a>
+        <a class="d-inline-block mx-1 text-dark" target="_blank" rel="opener" href="{{ site.baseurl }}/members/{{ member[0] }}"><i class="fa-solid fa-link"></i></a>
         {% endif %}
       </p>
     </div>
