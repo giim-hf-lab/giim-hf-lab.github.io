@@ -23,6 +23,6 @@ git config --global user.email "laitingsheng@hotmail.com"
 
 git add docs
 
-git commit -m 'Automated JSON Resume build from GitHub Actions'
+git commit -m 'Automated JSON Resume build from GitHub Actions' || echo "Nothing to commit"
 
 git push

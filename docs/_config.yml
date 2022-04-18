@@ -29,3 +29,6 @@ sass:
 
 exclude:
   - CNAME
+
+theme:
+remote_theme:
