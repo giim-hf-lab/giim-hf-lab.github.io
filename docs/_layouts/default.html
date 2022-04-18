@@ -1,6 +1,7 @@
 ---
 layout: plain
 ---
-<main{% if page.main_id %} id="main-{{ page.main_id }}"{% endif %} class="my-5 container">
+{% assign main_id = page.main_id | default: layout.main_id %}
+<main{% if main_id %} id="main-{{ main_id }}"{% endif %} class="my-5 container">
 {{ content }}
 </main>

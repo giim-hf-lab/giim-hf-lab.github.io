@@ -1,0 +1,99 @@
+{
+  "basics": {
+    "name": "雷欢",
+    "label": "高级工程师",
+    "image": "",
+    "email": "huan.l@giim.ac.cn",
+    "summary": "长期从事计算机视觉、人工智能应用等专业技术领域研发工作。主持完成广东省重大科技专项、广东省科技计划项目等各级项目5项，参与省重点领域研发计划等省市级项目10余项。以第一作者或通讯作者发表论文近10篇，其中SCI检索3篇；申请发明专利30余件，其中获授权14件；出版学术专著1部；获国际先进水平科技成果鉴定1项，获广东省科技进步奖二等奖1项，获佛山市科技奖二等奖1项。",
+    "location": {
+      "city": "广州",
+      "countryCode": "中国"
+    }
+  },
+  "work": [
+    {
+      "name": "广东省科学院智能制造研究所",
+      "position": "科研人员",
+      "url": "http://www.giim.ac.cn",
+      "startDate": "2013-07-01",
+      "endDate": "现在",
+      "summary": "Description…",
+      "highlights": [
+        "Started the company"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "广东工业大学",
+      "url": "https://www.gdut.edu.cn/",
+      "area": "控制工程",
+      "studyType": "硕士",
+      "startDate": "2011-09-01",
+      "endDate": "2013-06-01",
+      "courses": [
+        "机器视觉及其应用"
+      ]
+    }
+  ],
+  "awards": [
+    {
+      "title": "广东省科技进步二等奖",
+      "date": "2019-11-01",
+      "awarder": "广东省科技厅",
+      "summary": "There is no spoon."
+    }
+  ],
+  "certificates": [
+    {
+      "name": "Certificate",
+      "date": "2021-11-07",
+      "issuer": "Company",
+      "url": "https://certificate.com"
+    }
+  ],
+  "publications": [
+    {
+      "name": "Publication",
+      "publisher": "Company",
+      "releaseDate": "2014-10-01",
+      "url": "https://publication.com",
+      "summary": "Description…"
+    }
+  ],
+  "interests": [
+    {
+      "name": "Wildlife",
+      "keywords": [
+        "Ferrets",
+        "Unicorns"
+      ]
+    }
+  ],
+  "references": [
+    {
+      "name": "雷欢",
+      "reference": "Reference…"
+    }
+  ],
+  "projects": [
+    {
+      "name": "Project",
+      "description": "Description…",
+      "highlights": [
+        "Won award at AIHacks 2016"
+      ],
+      "keywords": [
+        "HTML"
+      ],
+      "startDate": "2019-01-01",
+      "endDate": "2021-01-01",
+      "url": "https://project.com/",
+      "roles": [
+        "Team Lead"
+      ],
+      "entity": "Entity",
+      "type": "application"
+    }
+  ]
+}
