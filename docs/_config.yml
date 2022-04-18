@@ -11,7 +11,7 @@ defaults:
       type: posts
     values:
       layout: post
-      permalink: /:categories/:year-:month-:day-:title
+      permalink: /:categories/:year/:month/:day/:title
 
 plugins:
   - jekyll-sitemap
