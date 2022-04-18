@@ -44,15 +44,7 @@
       "summary": "There is no spoon."
     }
   ],
-  "certificates": [
-    {
-      "name": "Certificate",
-      "date": "2021-11-07",
-      "issuer": "Company",
-      "url": "https://certificate.com"
-    }
-  ],
-  "publications": [
+  "paper": [
     {
       "name": "Publication",
       "publisher": "Company",
@@ -68,12 +60,6 @@
         "Ferrets",
         "Unicorns"
       ]
-    }
-  ],
-  "references": [
-    {
-      "name": "雷欢",
-      "reference": "Reference…"
     }
   ],
   "projects": [

@@ -1,6 +1,5 @@
 {
 	"scripts": {
-		"build:pdf": "resume export resume.pdf",
 		"build:html": "resume export resume.html"
 	},
 	"devDependencies": {
