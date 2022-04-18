@@ -7,44 +7,25 @@
 body {
   @include font-hei;
 
+  img {
+    max-width: 100%;
+  }
+
   header {
     #header-title {
       margin-top: 60px;
       img {
         max-height: 200px;
-        max-width: 100%;
       }
     }
   }
 
-  main#main-members {
-    .author-box {
-      img.author-thumb {
-        width: 100%;
-      }
-    }
+  img.author-thumb, img.post-thumb {
+    width: 100%;
   }
 
-  .post-thumb {
-    img {
-      width: 100%;
-    }
-
-    .mask {
-      background-color: rgba(251, 251, 251, 0.2);
-    }
-  }
-
-  main#main-about {
-    img {
-      width: 100%;
-    }
-  }
-
-  main#main-post {
-    img {
-      max-width: 100%;
-    }
+  .mask {
+    background-color: rgba(251, 251, 251, 0.2);
   }
 
   footer {
