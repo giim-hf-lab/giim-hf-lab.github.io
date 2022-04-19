@@ -3,10 +3,10 @@ title: 团队成员
 ---
 
 {% for member in site.data.members %}
-<div id="{{ member[0] }}" class="card my-5 author-box">
+<div id="{{ member[0] }}" class="card my-5">
   <div class="row">
     <div class="col-4 col-md-3 col-lg-2">
-      <img class="img-fluid author-thumb" src="{{ site.baseurl }}/assets/avatars/{{ member[0] }}.png" alt="{{ member.name }}" />
+      <img class="img-fluid w-100" src="{{ site.baseurl }}/assets/avatars/{{ member[0] }}.png" alt="{{ member.name }}" />
     </div>
     <div class="col-8 col-md-9 col-lg-10 px-3">
       <h3 class="mt-3">{% if member[1].display_name %}{{ member[1].display_name }} ({{ member[1].name }}){% else %}{{ member[1].name }}{% endif %}</h3>
