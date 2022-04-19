@@ -1,0 +1,20 @@
+name: Generate achievements data
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - .github/workflows/generate_achievement_data.yml
+      - ci/generate_achievement_data.py
+      - ci/generate_achievement_data.sh
+      - achievements.raw.xlsx
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v3
+        with:
+          python-version: "3.10"
+      - run: python3 -m pip install -U pip pandas openpyxl
+      - run: bash ci/generate_achievement_data.sh
