@@ -11,6 +11,8 @@ insert_final_newline = true
 [*.{json,tex}]
 tab_width = 2
 
-[*.{yaml,yml,md,html,xml,css,sass,scss}]
+[*.{py,yaml,yml,md,html,xml,css,sass,scss}]
 indent_style = space
+
+[*.{yaml,yml,md,html,xml,css,sass,scss}]
 indent_size = 2

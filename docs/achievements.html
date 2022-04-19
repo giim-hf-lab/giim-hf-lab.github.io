@@ -13,23 +13,21 @@ title: 科研成果
       <thead>
       <tr class="d-flex">
         <th class="col-2" scope="col">项目编号</th>
+        <th class="col-1" scope="col">项目时间</th>
         <th class="col-4" scope="col">项目所属计划及领域</th>
-        <th class="col-5" scope="col">项目名称</th>
+        <th class="col-4" scope="col">项目名称</th>
         <th class="col-1" scope="col">项目经费</th>
       </tr>
       </thead>
       <tbody>
-      {% assign year_groups = site.data.achievements.projects | group_by: "year" | sort: "name" %}
-      {% for year_group in year_groups reversed %}
-        {% assign sorted_items = year_group.items | sort: "id" %}
-        {% for item in sorted_items %}
+      {% for row in site.data.achievements.projects %}
       <tr class="d-flex">
-        <th class="col-2" scope="row">{{ item.id }}</th>
-        <td class="col-4">{{ item.super_project }}{{ item.category }}</td>
-        <td class="col-5">{{ item.title }}</td>
-        <td class="col-1">{{ item.allowance.amount }}{{ item.allowance.scale }}{{ item.allowance.unit }}</td>
+        <th class="col-2" scope="row">{{ row.id }}</th>
+        <td class="col-1">{{ row.year }}</td>
+        <td class="col-4">{{ row.super_project }}{{ row.category }}</td>
+        <td class="col-4">{{ row.title }}</td>
+        <td class="col-1">{{ row.allowance }}</td>
       </tr>
-        {% endfor %}
       {% endfor %}
       </tbody>
     </table>
@@ -84,27 +82,13 @@ title: 科研成果
         </tr>
       </thead>
       <tbody>
-        {% assign applied_year_groups = site.data.achievements.patents | group_by: "applied.year" %}
-        {% for applied_year_group in applied_year_groups reversed %}
-          {% assign sorted_items = applied_year_group.items | sort: "id" %}
-          {% for item in sorted_items %}
-        {% if item.authorised %}
-        <tr class="d-flex table-success">
-        {% else %}
+        {% for row in site.data.achievements.patents %}
         <tr class="d-flex">
-        {% endif %}
-          <th class="col-2" scope="row">{{ item.id }}</th>
-          <td class="col-2">{{ item.applied.year }}-{{ item.applied.month }}-{{ item.applied.day }}</td>
-          <td class="col-2">
-          {% if item.authorised %}
-            {{ item.authorised.year }}-{{ item.authorised.month }}-{{ item.authorised.day }}
-          {% else %}
-            未授权
-          {% endif %}
-          </td>
-          <td class="col-6">{{ item.title }}</td>
+          <th class="col-2" scope="row">{{ row.id }}</th>
+          <td class="col-2">{{ row.applied }}</td>
+          <td class="col-2">{{ row.authorised }}</td>
+          <td class="col-6">{{ row.title }}</td>
         </tr>
-          {% endfor %}
         {% endfor %}
       </tbody>
     </table>
@@ -127,16 +111,12 @@ title: 科研成果
         </tr>
       </thead>
       <tbody>
-        {% assign year_groups = site.data.achievements.copyrights | group_by: "registered.year" %}
-        {% for year_group in year_groups reversed %}
-          {% assign sorted_items = year_group.items | sort: "id" %}
-          {% for item in sorted_items %}
+        {% for row in site.data.achievements.copyrights %}
         <tr class="d-flex">
-          <th class="col-2" scope="row">{{ item.id }}</th>
-          <td class="col-2">{{ item.registered.year }}-{{ item.registered.month }}-{{ item.registered.day }}</td>
-          <td class="col-8">{{ item.title }}</td>
+          <th class="col-2" scope="row">{{ row.id }}</th>
+          <td class="col-2">{{ row.registered }}</td>
+          <td class="col-8">{{ row.title }}</td>
         </tr>
-          {% endfor %}
         {% endfor %}
       </tbody>
     </table>
@@ -154,21 +134,19 @@ title: 科研成果
       <thead>
         <tr class="d-flex">
           <th class="col-2" scope="col">奖项编号</th>
+          <th class="col-1" scope="col">获得时间</th>
           <th class="col-3" scope="col">奖项</th>
-          <th class="col-7" scope="col">获奖项目名称</th>
+          <th class="col-6" scope="col">获奖项目名称</th>
         </tr>
       </thead>
       <tbody>
-        {% assign year_groups = site.data.achievements.awards | group_by: "year" %}
-        {% for year_group in year_groups reversed %}
-          {% assign sorted_items = year_group.items | sort: "id" %}
-          {% for item in sorted_items %}
+        {% for row in site.data.achievements.awards %}
         <tr class="d-flex">
-          <th class="col-2" scope="row">{{ item.id }}</th>
-          <td class="col-3">{{ item.award }}</td>
-          <td class="col-7">{{ item.title }}</td>
+          <th class="col-2" scope="row">{{ row.id }}</th>
+          <td class="col-1">{{ row.year }}</td>
+          <td class="col-3">{{ row.award }}</td>
+          <td class="col-6">{{ row.title }}</td>
         </tr>
-          {% endfor %}
         {% endfor %}
       </tbody>
     </table>

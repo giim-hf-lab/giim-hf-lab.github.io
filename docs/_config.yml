@@ -13,6 +13,12 @@ defaults:
       layout: post
       permalink: /:categories/:year/:month/:day/:title
 
+csv_reader:
+  converters:
+    - date
+  headers: true
+  encoding: utf-8
+
 plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
