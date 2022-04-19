@@ -1,0 +1,9 @@
+{% for raw_author in include.authors %}
+  {% assign author_id = site.data.canonicalisation[raw_author] %}
+  {% if author_id %}
+    {% assign author = site.data.members[author_id] %}
+<a class="badge badge-info mx-1" target="_blank" href="{{ site.baseurl }}/members#{{ author_id }}">{{ author.display_name | default: author.name }}</a>
+  {% else %}
+<span class="badge badge-info mx-1">{{ raw_author }}</span>
+  {% endif %}
+{% endfor %}
