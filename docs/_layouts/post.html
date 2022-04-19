@@ -3,6 +3,46 @@ layout: default
 excerpt_separator: <!--endexcerpt-->
 ---
 
-<h1 class="m-0 p-5 text-center">{{ page.title }}</h1>
+<section class="m-0 p-5 text-center">
+  <h1>{{ page.title }}</h1>
+  {% for raw_author in page.authors %}
+    {% assign author_id = site.data.canonicalisation[raw_author] %}
+    {% if author_id %}
+      {% assign author = site.data.members[author_id] %}
+  <a class="badge badge-info mx-1" target="_blank" href="{{ site.baseurl }}/members#{{ author_id }}">{{ author.display_name | default: author.name }}</a>
+    {% else %}
+  <span class="badge badge-info mx-1">{{ raw_author }}</span>
+    {% endif %}
+  {% endfor %}
+</section>
+
+{% if page.overview_image_type %}
+<img class="m-0 w-100" src="{{ site.baseurl }}/assets/images{{ page.url }}/overview.{{ page.overview_image_type }}" alt="Post Overview" />
+{% endif %}
+
+{% if page.abstract %}
+<section id="abstract" class="bg-light card my-3">
+  <div class="card-header m-0 text-center">
+    <h2 class="m-0 text-center">
+      <strong>论文摘要</strong>
+    </h2>
+  </div>
+  <p class="card-body m-0">{{ page.abstract }}</p>
+  <div class="card-footer m-0">
+    <p>文章于{{ page.date | date: "%F" }}发表在<a target="_blank" rel="opener external" href="https://doi.org/{{ page.doi }}">{{ page.by }}</a>。</p>
+  </div>
+</section>
+{% endif %}
+
+{% if page.editor %}
+  {% assign editor_id = site.data.canonicalisation[page.editor] %}
+  {% if editor_id %}
+    {% assign editor = site.data.members[editor_id] %}
+    {% capture editor_capture %}<a target="_blank" href="{{ site.baseurl }}/members#{{ editor_id }}">{{ editor.display_name | default: editor.name }}</a>{% endcapture %}
+  {% else %}
+    {% capture editor_capture %}{{ page.editor }}{% endcapture %}
+  {% endif %}
+<p class="font-italic">本文由{{ editor_capture }}编辑。</p>
+{% endif %}
 
 {{content}}
