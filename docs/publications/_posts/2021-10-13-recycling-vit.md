@@ -1,5 +1,4 @@
 ---
-doi: 10.3390/su132111572
 title: Recycling waste classification using vision transformer on portable device
 editor: leihuan
 authors:
@@ -8,7 +7,14 @@ authors:
   - Zeyu Jiao
   - Zhenyu Zhong
 by: Sustainability
+tags:
+  - SCI
+doi: 10.3390/su132111572
 abstract: Recycling resources from waste can effectively alleviate the threat of global resource strain. Due to the wide variety of waste, relying on manual classification of waste and recycling recyclable resources would be costly and inefficient. In recent years, automatic recyclable waste classification based on convolutional neural network (CNN) has become the mainstream method of waste recycling. However, due to the receptive field limitation of the CNN, the accuracy of classification has reached a bottleneck, which restricts the implementation of relevant methods and systems. In order to solve the above challenges, in this study, a deep neural network architecture only based on self-attention mechanism, named Vision Transformer, is proposed to improve the accuracy of automatic classification. Experimental results on TrashNet dataset show that the proposed method can achieve the highest accuracy of 96.98%, which is better than the existing CNN-based method. By deploying the well-trained model on the server and using a portable device to take pictures of waste in order to upload to the server, automatic waste classification can be expediently realized on the portable device, which broadens the scope of application of automatic waste classification and is of great significance with respect to resource conservation and recycling.
+contributions:
+  - An automatic waste classification method based on vision transformer is proposed to improve the efficiency of resource recycling.
+  - Experiments show that the proposed method outperforms the existing methods.
+  - The trained model is deployed on cloud server for real-time and convenient waste classification on portable devices.
 thumbnail_type: png
 overview_image_type: png
 ---

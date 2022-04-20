@@ -15,7 +15,11 @@
       </a>
       {% include authors.html authors = post.authors %}
       <hr>
-      <p>{{ post.abstract }}</p>
+      <ul>
+        {% for contribution in post.contributions %}
+        <li>{{ contribution }}</li>
+        {% endfor %}
+      </ul>
     </div>
   </div>
 </div>

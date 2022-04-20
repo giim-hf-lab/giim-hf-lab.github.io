@@ -16,5 +16,5 @@ jobs:
       - uses: actions/setup-python@v3
         with:
           python-version: "3.10"
-      - run: python3 -m pip install -U pip pandas openpyxl
+      - run: python3 -m pip install -U pip pandas openpyxl pyyaml
       - run: bash ci/generate_achievement_data.sh

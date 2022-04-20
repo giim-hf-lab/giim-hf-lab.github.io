@@ -55,7 +55,12 @@ title: 科研成果
         {% for post in sorted_posts reversed %}
         <tr class="d-flex">
           <th class="col-2" scope="row">{{ post.date | date: "%F" }}</th>
-          <td class="col-3"><a target="_blank" rel="opener external" href="https://doi.org/{{ post.doi }}">{{ post.by }}</a></td>
+          {% if post.doi %}
+            {% capture doi_output %}<a target="_blank" rel="opener external" href="https://doi.org/{{ post.doi }}">{{ post.by }}</a>{% endcapture %}
+          {% else %}
+            {% capture doi_output %}{{ post.by }}{% endcapture %}
+          {% endif %}
+          <td class="col-3">{{ doi_output }}</td>
           <td class="col-3">{{ post.authors | join: ", " }}</td>
           <td class="col-4"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></td>
         </tr>
