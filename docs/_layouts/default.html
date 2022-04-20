@@ -1,7 +1,103 @@
----
-layout: plain
----
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no" />
+
+  <title>{{ page.title }} | {{ site.title }}</title>
+
+  {% seo %}
+
+  <link href="{{ site.baseurl }}/assets/images/logo.png" rel="icon" />
+
+  <link href="{{ site.baseurl }}/assets/css/prism.css" rel="stylesheet" />
+  <link href="{{ site.baseurl }}/assets/css/style.css" rel="stylesheet" />
+</head>
+
+<body>
+
+<header class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+  <div class="container-fluid">
+    <a class="navbar-brand nav-link" target="_blank" rel="opener external" href="http://giim.ac.cn/">
+      <img src="{{ site.baseurl }}/assets/images/logo.png" alt="logo" height="30" />
+    </a>
+
+    <button id="top-navbar-toggle"
+            class="navbar-toggler"
+            type="button"
+            data-mdb-toggle="collapse"
+            data-mdb-target="#top-navbar"
+            aria-controls="top-navbar"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+
+    <div id="top-navbar" class="collapse navbar-collapse" aria-labelledby="top-navbar-toggle">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link mx-1 active" href="{{ site.baseurl }}/">主页</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link mx-1" href="{{ site.baseurl }}/members">团队成员</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link mx-1" href="{{ site.baseurl }}/publications">学术论文</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a id="top-navbar-solutions-toggle"
+             class="nav-link mx-1 dropdown-toggle"
+             type="button"
+             data-mdb-toggle="dropdown"
+             data-mdb-target="top-navbar-solutions"
+             aria-controls="top-navbar-solutions"
+             aria-expanded="false"
+             aria-label="Toggle solutions navigation">
+            解决方案
+          </a>
+          <ul id="top-navbar-solutions" class="dropdown-menu" aria-labelledby="top-navbar-solutions-toggle">
+            <li>
+              <a class="dropdown-item" href="{{ site.baseurl }}/solutions/governance">智慧治理</a>
+              <a class="dropdown-item" href="{{ site.baseurl }}/solutions/life">智慧生活</a>
+              <a class="dropdown-item" href="{{ site.baseurl }}/solutions/disease-control">疫情防控</a>
+              <a class="dropdown-item" href="{{ site.baseurl }}/solutions/manufacture">智慧制造</a>
+              <a class="dropdown-item" href="{{ site.baseurl }}/solutions/agriculture">智慧农业</a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link mx-1" href="{{ site.baseurl }}/achievements">科研成果</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link mx-1" href="{{ site.baseurl }}/about">关于我们</a>
+        </li>
+      </ul>
+
+      <ul class="navbar-nav list-inline">
+        <li class="nav-item">
+          <a class="nav-link" target="_blank" href="https://github.com/giim-hf-lab" rel="opener external">
+            <i class="fa-brands fa-github"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</header>
+
 {% assign main_id = page.main_id | default: layout.main_id %}
-<main{% if main_id %} id="main-{{ main_id }}"{% endif %} class="my-5 container">
+<main{% if main_id %} id="main-{{ main_id }}"{% endif %} class="bg-white container my-5 py-3">
 {{ content }}
 </main>
+
+<footer class="bg-light text-center p-3 fixed-bottom">
+  Copyright © {{ site.time | date: "%Y" }} <a href="{{ site.baseurl }}/">{{ site.title }}</a>
+</footer>
+
+<script src="{{ site.baseurl }}/assets/js/jquery.min.js"></script>
+<script src="{{ site.baseurl }}/assets/js/prism.js"></script>
+<script src="{{ site.baseurl }}/assets/js/mdb.min.js"></script>
+
+</body>
+
+</html>

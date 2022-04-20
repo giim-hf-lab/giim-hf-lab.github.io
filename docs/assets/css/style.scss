@@ -12,17 +12,13 @@
 body {
   @include font-hei;
 
+  background-image: url("{{ site.baseurl }}/assets/images/background.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+
   img {
     max-width: 100%;
-  }
-
-  header {
-    #header-title {
-      margin-top: 60px;
-      img {
-        max-height: 200px;
-      }
-    }
   }
 
   .mask {
