@@ -94,6 +94,30 @@
   Copyright © {{ site.time | date: "%Y" }} <a href="{{ site.baseurl }}/">{{ site.title }}</a>
 </footer>
 
+{% if page.amap %}
+<script type="text/javascript">
+  window._AMapSecurityConfig = {
+    securityJsCode: "{{ site.amap.secret }}"
+  }
+</script>
+<script src="https://webapi.amap.com/maps?v=2.0&key={{ site.amap.key }}"></script>
+<script defer type="text/javascript">
+  const map = new AMap.Map("{{ page.amap.element }}", {
+    zoom: {{ page.amap.zoom | default: 12 }}
+  });
+  map.plugin(["AMap.PlaceSearch"], function() {
+    new AMap.PlaceSearch().getDetails("{{ page.amap.poiid }}", function(status, result) {
+      const position = result.poiList.pois[0].location;
+      map.setCenter(position, true);
+      new AMap.Marker({
+        map: map,
+        position: position
+      })
+    });
+  });
+</script>
+{% endif %}
+
 <script src="{{ site.baseurl }}/assets/js/jquery.min.js"></script>
 <script src="{{ site.baseurl }}/assets/js/prism.js"></script>
 <script src="{{ site.baseurl }}/assets/js/mdb.min.js"></script>

@@ -9,6 +9,10 @@
 @import "fontawesome/brands";
 @import "mdb.free.scss";
 
+#map-canvas {
+  min-height: 200px;
+}
+
 body {
   @include font-hei;
 
