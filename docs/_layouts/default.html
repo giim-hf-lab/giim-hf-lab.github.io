@@ -86,7 +86,7 @@
 </header>
 
 {% assign main_id = page.main_id | default: layout.main_id %}
-<main{% if main_id %} id="main-{{ main_id }}"{% endif %} class="bg-white container my-5 py-3">
+<main{% if main_id %} id="main-{{ main_id }}"{% endif %} class="container my-5 py-3">
 {{ content }}
 </main>
 

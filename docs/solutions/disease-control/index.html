@@ -1,0 +1,63 @@
+---
+layout: default
+title: 疫情防控
+grids:
+  description:
+    - path: 1.png
+      title: 口罩佩戴检测
+    - path: 2.jpg
+      title: 穿防疫服识别
+    - path: 3.jpg
+      title: 药品售卖识别
+    - path: 4.jpg
+      title: 行人轨迹追踪
+---
+
+<section class="bg-white my-0 p-5">
+  <div class="container">
+    <h3 class="m-0 pb-5 text-center">
+      背景趋势
+    </h3>
+    <p>传染病防控体系建设，是国家安全基石之一。近年在党中央坚强领导下，我国已逐步建立了反应灵敏、高效统一、功能全面的传染病监测报告体系，在全球新冠疫情防控中取得重大战略成果。然而，受长期持续的疫情影响，公众及相关从业人员的防护意识减退，存在接种疫苗后就不用再戴口罩等侥幸心理，在落实防疫措施和个人防护方面出现漏洞。同时随着传染病病毒变异进化，农贸市场、冷库、药店等重点场所疫情传播风险进一步增大，易存在防疫用品穿戴等行为不规范、未知重点人员追踪难等导致的安全隐患，如何精准监测防控行为并掌握重点人员轨迹已成当前亟待解决的关键问题。</p>
+  </div>
+</section>
+
+<section class="bg-light my-0 p-5">
+  <div class="container">
+    <h3 class="m-0 pb-5 text-center">
+      方案简介
+    </h3>
+    <p>借助新一代人工智能技术优势，自主研发了防疫用品穿戴合规性检测、疫情防控行为识别和重点人员轨迹实时追踪溯算法，可打造重大传染病疫情防控在线智能监测与预警系统，具体内容涵盖：口罩、防疫服穿戴行为检测；重点场所人群距离估计与轨迹追踪；重点出入通道测量体温、出示健康码行为监测；药品违规售卖行为监测等。通过方案实施将可形成全方位、智能化、实时响应的防疫监测预警体系，为全社会群防群控筑牢隐形的防火墙。</p>
+  </div>
+</section>
+
+<section class="bg-white my-0 p-5">
+  <div class="container">
+    <h3 class="m-0 pb-5 text-center">
+      核心优势
+    </h3>
+    <div class="m-0 row d-flex">
+      <div class="col-6 d-flex">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">科学智能化监测预警</h5>
+            <p class="card-text">利用人工智能和视频大数据技术，打造全天候、智能化的重大传染病疫情防控智能监测预警系统，可实现防疫用品穿戴合规性检测、疫情防控行为识别和重点人员轨迹实时追踪溯，支持农贸市场、冷库、药店等多种重点场所应用，形成全方位、智能化、实时响应的防疫监测预警体系，补齐公共卫生环境短板，保障人民群众生命安全和身体健康。</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 d-flex">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">视频AI常态化防控</h5>
+            <p class="card-text">基于团队科研平台和核心技术基础，自主研发了高可靠、高响应的重点区域防疫用品穿戴行为检测和人员轨迹追踪等关键技术，可满足远距离、大范围、人员密集环境等不同防疫场景下的检测需求，可打造云边端协同的疫情监测视频大数据分析平台，实现24小时智能化、立体化的疫情在线防控应用，促进个人防护常态化、规范化，加速构建疫情防控常态化长效机制。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bg-light my-0 p-5">
+  {% assign baseurl = site.baseurl | append: "/assets/images" | append: page.url %}
+  {% include grid/quad.html title = "应用场景" baseurl = baseurl images = page.grids.description %}
+</section>
