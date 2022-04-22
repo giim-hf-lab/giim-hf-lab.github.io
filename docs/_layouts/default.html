@@ -9,7 +9,25 @@
 
   {% seo %}
 
-  <link href="{{ site.baseurl }}/assets/images/logo.png" rel="icon" />
+  <link rel="icon" type="image/svg+xml" href="{{ site.baseurl }}/favicon.svg">
+  <link rel="icon" type="image/png" href="{{ site.baseurl }}/favicon.png">
+  <link rel="apple-touch-icon" sizes="57x57" href="{{ site.baseurl }}/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="{{ site.baseurl }}/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="{{ site.baseurl }}/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="{{ site.baseurl }}/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="{{ site.baseurl }}/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="{{ site.baseurl }}/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="{{ site.baseurl }}/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="{{ site.baseurl }}/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ site.baseurl }}/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="{{ site.baseurl }}/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ site.baseurl }}/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="{{ site.baseurl }}/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="{{ site.baseurl }}/favicon-16x16.png">
+  <link rel="manifest" href="{{ site.baseurl }}/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="{{ site.baseurl }}/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
 
   <link href="{{ site.baseurl }}/assets/css/prism.css" rel="stylesheet" />
   <link href="{{ site.baseurl }}/assets/css/style.css" rel="stylesheet" />
@@ -19,8 +37,8 @@
 
 <header class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
   <div class="container-fluid">
-    <a class="navbar-brand nav-link" target="_blank" rel="opener external" href="http://giim.ac.cn/">
-      <img src="{{ site.baseurl }}/assets/images/logo.png" alt="logo" height="30" />
+    <a class="navbar-brand nav-link" href="{{ site.baseurl }}/">
+      <img src="{{ site.baseurl }}/assets/logos/main.svg" alt="logo" height="30" />
     </a>
 
     <button id="top-navbar-toggle"
@@ -37,10 +55,7 @@
     <div id="top-navbar" class="collapse navbar-collapse" aria-labelledby="top-navbar-toggle">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link mx-1 active" href="{{ site.baseurl }}/">主页</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link mx-1" href="{{ site.baseurl }}/members">团队成员</a>
+          <a class="nav-link me-1" href="{{ site.baseurl }}/members">团队成员</a>
         </li>
         <li class="nav-item">
           <a class="nav-link mx-1" href="{{ site.baseurl }}/publications">学术论文</a>
@@ -70,14 +85,29 @@
           <a class="nav-link mx-1" href="{{ site.baseurl }}/achievements">科研成果</a>
         </li>
         <li class="nav-item active">
-          <a class="nav-link mx-1" href="{{ site.baseurl }}/about">关于我们</a>
+          <a class="nav-link ms-1" href="{{ site.baseurl }}/about">关于我们</a>
         </li>
       </ul>
 
       <ul class="navbar-nav list-inline">
         <li class="nav-item">
-          <a class="nav-link" target="_blank" href="https://github.com/giim-hf-lab" rel="opener external">
+          <a class="nav-link" target="_blank" rel="opener external" href="https://github.com/giim-hf-lab">
             <i class="fa-brands fa-github"></i>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" target="_blank" rel="opener external nofollow" href="http://giim.ac.cn">
+            <img src="{{ site.baseurl }}/assets/logos/institute.png" alt="广东省科学院智能制造研究所" height="20" />
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" target="_blank" rel="opener external nofollow" href="http://www.gdas.gd.cn">
+            <img src="{{ site.baseurl }}/assets/logos/academy.png" alt="广东省科学院" height="20" />
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" target="_blank" rel="opener external nofollow" href="https://www.shuangyi-tech.com/">
+            <img src="{{ site.baseurl }}/assets/logos/shuangyi.png" alt="深圳市双翌光电科技有限公司" height="20" />
           </a>
         </li>
       </ul>
