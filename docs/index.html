@@ -2,5 +2,31 @@
 title: 主页
 ---
 
-{% assign index_publications = site.categories.publications | where_exp: "item", "item.thumbnail_type" %}
-{% include listing.html posts = index_publications %}
+<section class="bg-white my-0 p-5">
+  <div class="container">
+    <h3 class="m-0 pb-5 text-center">
+      解决方案
+    </h3>
+    <div class="row image-grid text-center">
+      {% assign document = site.solutions[2] %}
+      {% assign image_path = site.baseurl | append: "/assets/images" | append: document.id | append: "/" | append: document.grids.description[0].path %}
+      {% include image/mask.html column = "col-lg-6" path = image_path title = document.title %}
+
+      {% assign document = site.solutions[3] %}
+      {% assign image_path = site.baseurl | append: "/assets/images" | append: document.id | append: "/" | append: document.grids.description[0].path %}
+      {% include image/mask.html column = "col-lg-6" path = image_path title = document.title %}
+
+      {% assign document = site.solutions[1] %}
+      {% assign image_path = site.baseurl | append: "/assets/images" | append: document.id | append: "/" | append: document.grids.description[0].path %}
+      {% include image/mask.html column = "col-lg-4" path = image_path title = document.title %}
+
+      {% assign document = site.solutions[4] %}
+      {% assign image_path = site.baseurl | append: "/assets/images" | append: document.id | append: "/" | append: document.grids.description[0].path %}
+      {% include image/mask.html column = "col-lg-4" path = image_path title = document.title %}
+
+      {% assign document = site.solutions[0] %}
+      {% assign image_path = site.baseurl | append: "/assets/images" | append: document.id | append: "/" | append: document.grids.description[0].path %}
+      {% include image/mask.html column = "col-lg-4" path = image_path title = document.title %}
+    </div>
+  </div>
+</section>

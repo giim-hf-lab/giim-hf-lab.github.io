@@ -1,0 +1,63 @@
+---
+layout: default
+title: 智慧生活
+grids:
+  description:
+    - path: 1.jpg
+      title: 健康行为分析
+    - path: 2.gif
+      title: 人员跟踪分析
+    - path: 3.jpg
+      title: 异常状况检测
+    - path: 4.jpg
+      title: 武术动作评估
+---
+
+<section class="bg-white my-0 p-5">
+  <div class="container">
+    <h3 class="m-0 pb-5 text-center">
+      背景趋势
+    </h3>
+    <p>随着社会的进步发展，人们的生活水平不断提高，高质量的健康生活和运动娱乐已逐步成为人们关注的焦点，而我国人口规模巨大，未来智慧生活服务技术及产品市场前景广阔，特别是随着人口老龄化加剧，老年人群的人性化健康安全服务研究已成为我国亟待解决关键问题。</p>
+  </div>
+</section>
+
+<section class="bg-light my-0 p-5">
+  <div class="container">
+    <h3 class="m-0 pb-5 text-center">
+      方案简介
+    </h3>
+    <p>依托团队NVIDIA DGX-1国际顶级人工智能开发平台，自主研发了人体健康异常行为（含跌倒、咳嗽、久坐、胸腹痛等）识别算法、训练/康复运动分析评估算法、行人跨镜轨迹追踪算法等，可打造不同人群（老人、运动员、康复人员等）的智能化行为运动分析解决方案和智能系统产品，解决人们生活中老人跌倒等异常状况发现不及时、训练/康复动作不规范、特殊人群活动行为实时掌控等难题，使人在生活中更安全、更健康、更舒适，提高人们的生活质量，推动社会和谐健康发展。</p>
+  </div>
+</section>
+
+<section class="bg-white my-0 p-5">
+  <div class="container">
+    <h3 class="m-0 pb-5 text-center">
+      核心优势
+    </h3>
+    <div class="m-0 row d-flex">
+      <div class="col-6 d-flex">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">异常状况AI分析预警</h5>
+            <p class="card-text">采用计算机视觉、深度学习和大数据分析等技术，通过在监控区域实际可打造全天候、智能化的智慧生活智能监护系统，对于老人等特殊人群发生的跌倒等异常行为能实时准确的检测与追踪，及时地向亲属或医护人员报告紧急性情况信息，避免日常生活的异常行为安全隐患，提升人们生活质量和安全性。</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 d-flex">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">大数据精细化评估</h5>
+            <p class="card-text">利用人工智能和视频大数据技术，结合运动行为规范标准和行为习惯，构建智能化、可视化、精细化AI运动评估系统，实现运动、动作智能分析与健康评估管理，为运动员、康复人员和习武者等提供科学、客观的指导方案，避免因动作不规范导致的健康安全问题，同时增添运动乐趣，使人们生活更科学、更健康。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bg-light my-0 p-5">
+  {% assign baseurl = site.baseurl | append: "/assets/images" | append: page.id %}
+  {% include grid/quad.html title = "应用场景" baseurl = baseurl images = page.grids.description %}
+</section>
