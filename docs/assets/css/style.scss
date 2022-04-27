@@ -12,7 +12,7 @@
 body {
   @include font-hei;
 
-  background-image: url("{{ site.baseurl }}/assets/images/background.jpg");
+  background-image: url("https://cdn.ergonomic.top/images/background.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;

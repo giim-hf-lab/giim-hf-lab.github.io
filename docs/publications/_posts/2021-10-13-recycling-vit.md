@@ -25,21 +25,21 @@ overview_image_type: png
 {: .text-center}
 
 {: .text-center}
-![Overall scheme of the proposed method]({{ site.baseurl }}/assets/images{{ page.url }}/1.png){: .w-75}
+![Overall scheme of the proposed method](https://cdn.ergonomic.top/images{{ page.url }}/1.png){: .w-75}
 
 
 ## VIT算法架构
 {: .text-center}
 
 {: .text-center}
-![Structure of vision transformer]({{ site.baseurl }}/assets/images{{ page.url }}/2.png){: .w-75}
+![Structure of vision transformer](https://cdn.ergonomic.top/images{{ page.url }}/2.png){: .w-75}
 
 
 ## 自注意机制的可视化展示
 {: .text-center}
 
 {: .text-center}
-![Visualization of self-attention mechanisms]({{ site.baseurl }}/assets/images{{ page.url }}/3.png){: .w-75}
+![Visualization of self-attention mechanisms](https://cdn.ergonomic.top/images{{ page.url }}/3.png){: .w-75}
 
 {: .text-center}
-![Visualization of self-attention mechanisms]({{ site.baseurl }}/assets/images{{ page.url }}/4.png){: .w-75}
+![Visualization of self-attention mechanisms](https://cdn.ergonomic.top/images{{ page.url }}/4.png){: .w-75}

@@ -58,6 +58,6 @@ grids:
 </section>
 
 <section class="bg-light my-0 p-5">
-  {% assign baseurl = site.baseurl | append: "/assets/images" | append: page.id %}
+  {% assign baseurl = "https://cdn.ergonomic.top/images" | append: page.id %}
   {% include grid/quad.html title = "应用场景" baseurl = baseurl images = page.grids.description %}
 </section>
