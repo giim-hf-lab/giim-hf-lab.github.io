@@ -127,7 +127,7 @@
 {% if page.amap %}
 <script type="text/javascript">
   window._AMapSecurityConfig = {
-    securityJsCode: "{{ site.amap.secret }}"
+    serviceHost: "https://auth.ergonomic.top/_AMapService"
   }
 </script>
 <script src="https://webapi.amap.com/maps?v=2.0&key={{ site.amap.key }}"></script>

@@ -43,7 +43,5 @@ exclude:
 theme:
 remote_theme:
 
-# TODO: unsafe API credentials, consider using proxy instead (https://lbs.amap.com/api/jsapi-v2/guide/abc/load)
 amap:
-  key: 2767bf8a43da00d42c477e4a08f3dea6
-  secret: 257694db4842ca764542d1fa58f7379a
+  key: cbe41f176a2bce88bc10a89de685be1e
