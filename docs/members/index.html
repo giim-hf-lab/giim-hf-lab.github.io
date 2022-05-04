@@ -6,7 +6,7 @@ title: 团队成员
 <div id="{{ member[0] }}" class="bg-light card my-5">
   <div class="row">
     <div class="col-4 col-md-3 col-lg-2">
-      <img class="m-1 w-100" src="https://cdn.ergonomic.top/avatars/{{ member[0] }}.png" alt="{{ member.name }}" />
+      <img class="m-1 w-100" src="https://avatars.cdn.ergonomic.top/{{ member[0] }}.png" alt="{{ member.name }}" />
     </div>
     <div class="col-8 col-md-9 col-lg-10 px-3">
       <h3 class="mt-3">{% if member[1].display_name %}{{ member[1].display_name }} ({{ member[1].name }}){% else %}{{ member[1].name }}{% endif %}</h3>
