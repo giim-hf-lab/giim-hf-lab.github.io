@@ -3,6 +3,48 @@ title: 主页
 ---
 
 <section class="bg-white card mx-0 my-5 p-0">
+  <div class="card-body p-3">
+    <video class="w-100" src="https://videos.cdn.ergonomic.top/intro.mp4" autoplay controls loop preload="auto"></video>
+  </div>
+</section>
+
+<section class="bg-white card mx-0 my-5 p-0">
+  <div class="card-header m-0 p-3 text-center">
+    <h2 class="m-0">
+      解决方案
+    </h2>
+  </div>
+  <div class="card-body">
+    <div class="row image-grid text-center">
+      {% assign document = site.solutions[2] %}
+      {% assign image_path = "https://images.cdn.ergonomic.top" | append: document.id | append: "/" | append: document.grids.description[0].path %}
+      {% assign target_link = site.baseurl | append: document.id %}
+      {% include image/mask.html column = "col-lg-6" path = image_path title = document.title link = target_link %}
+
+      {% assign document = site.solutions[3] %}
+      {% assign image_path = "https://images.cdn.ergonomic.top" | append: document.id | append: "/" | append: document.grids.description[0].path %}
+      {% assign target_link = site.baseurl | append: document.id %}
+      {% include image/mask.html column = "col-lg-6" path = image_path title = document.title link = target_link %}
+
+      {% assign document = site.solutions[1] %}
+      {% assign image_path = "https://images.cdn.ergonomic.top" | append: document.id | append: "/" | append: document.grids.description[0].path %}
+      {% assign target_link = site.baseurl | append: document.id %}
+      {% include image/mask.html column = "col-lg-4" path = image_path title = document.title link = target_link %}
+
+      {% assign document = site.solutions[4] %}
+      {% assign image_path = "https://images.cdn.ergonomic.top" | append: document.id | append: "/" | append: document.grids.description[0].path %}
+      {% assign target_link = site.baseurl | append: document.id %}
+      {% include image/mask.html column = "col-lg-4" path = image_path title = document.title link = target_link %}
+
+      {% assign document = site.solutions[0] %}
+      {% assign image_path = "https://images.cdn.ergonomic.top" | append: document.id | append: "/" | append: document.grids.description[0].path %}
+      {% assign target_link = site.baseurl | append: document.id %}
+      {% include image/mask.html column = "col-lg-4" path = image_path title = document.title link = target_link %}
+    </div>
+  </div>
+</section>
+
+<section class="bg-white card mx-0 my-5 p-0">
   <div class="card-header m-0 p-3 text-center">
     <h2 class="m-0">
       学术论文
@@ -33,36 +75,5 @@ title: 主页
       </div>
     </div>
     {% endfor %}
-  </div>
-</section>
-
-<section class="bg-white card mx-0 my-5 p-0">
-  <div class="card-header m-0 p-3 text-center">
-    <h2 class="m-0">
-      解决方案
-    </h2>
-  </div>
-  <div class="card-body">
-    <div class="row image-grid text-center">
-      {% assign document = site.solutions[2] %}
-      {% assign image_path = "https://images.cdn.ergonomic.top" | append: document.id | append: "/" | append: document.grids.description[0].path %}
-      {% include image/mask.html column = "col-lg-6" path = image_path title = document.title %}
-
-      {% assign document = site.solutions[3] %}
-      {% assign image_path = "https://images.cdn.ergonomic.top" | append: document.id | append: "/" | append: document.grids.description[0].path %}
-      {% include image/mask.html column = "col-lg-6" path = image_path title = document.title %}
-
-      {% assign document = site.solutions[1] %}
-      {% assign image_path = "https://images.cdn.ergonomic.top" | append: document.id | append: "/" | append: document.grids.description[0].path %}
-      {% include image/mask.html column = "col-lg-4" path = image_path title = document.title %}
-
-      {% assign document = site.solutions[4] %}
-      {% assign image_path = "https://images.cdn.ergonomic.top" | append: document.id | append: "/" | append: document.grids.description[0].path %}
-      {% include image/mask.html column = "col-lg-4" path = image_path title = document.title %}
-
-      {% assign document = site.solutions[0] %}
-      {% assign image_path = "https://images.cdn.ergonomic.top" | append: document.id | append: "/" | append: document.grids.description[0].path %}
-      {% include image/mask.html column = "col-lg-4" path = image_path title = document.title %}
-    </div>
   </div>
 </section>

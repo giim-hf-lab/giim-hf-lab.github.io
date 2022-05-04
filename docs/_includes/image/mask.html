@@ -3,7 +3,11 @@
     <img src="{{ include.path }}" alt="{{ include.title }}" />
     <div class="mask">
       <div class="d-flex justify-content-center align-items-center h-100">
-        <p class="text-white mb-0">{{ include.title }}</p>
+        {% if include.link %}
+        <a class="text-white mb-0 text-overlay" href="{{ include.link }}">{{ include.title }}</a>
+        {% else %}
+        <p class="text-white mb-0 text-overlay">{{ include.title }}</p>
+        {% endif %}
       </div>
     </div>
   </div>
