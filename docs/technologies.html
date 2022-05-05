@@ -1,0 +1,89 @@
+---
+title: 关键技术
+algorithms:
+  - name: car
+    title: 人车检测
+    thumbnail_type: jpg
+    description: 实现了不同光照、不同背景、不同角度等复杂条件下的大视场远距离人车在线检测，最小目标像素面积可达16×16，最高检测帧率可达140帧/秒，支持低功耗开发板部署，满足不同场景检测需求。
+  - name: wear
+    title: 穿戴规范检测
+    thumbnail_type: png
+    description: 主要根据作业现场安全穿戴规范要求对操作工人的是否佩戴安全帽、是否穿着反光背情况进行实时准确检测，可用于施工或生产现场的智能化安全监管。
+  - name: reid
+    title: 行人再识别
+    thumbnail_type: png
+    description: 主要根据行人衣服颜色、衣服纹理、手提包、背包等局部不变特征实现不同光照、不同视角、不同背景下的行人追踪识别，可提供适合各种实际场景的系列化、高精度、轻量化行人ReID模型。
+  - name: fall
+    title: 摔倒识别
+    thumbnail_type: png
+    description: 主要根据人体骨骼姿态关节点特征信息，结合时序建立摔倒判别策略，可实现不同场景下的摔倒行为实时准确判别。
+  - name: behavior
+    title: 健康行为分析
+    thumbnail_type: jpg
+    description: 主要根据人体在时间和空间上的特征变化信息，融合自注意力机制和3D卷积神经网络，可实现咳嗽、背疼、头颈疼、胸痛等健康异常行为识别。
+  - name: privacy
+    title: 隐私保护姿态识别
+    thumbnail_type: jpg
+    description: 主要根据老人院、居家等场所实际情况建立了隐私保护条件下的人体姿态检测模型，可实现模糊、低照度条件下的人体姿态分析识别。
+  - name: gesture
+    title: 手势识别
+    thumbnail_type: jpg
+    description: 主要根据人机交互实际场景需求，建立了不同人群的不同手势的深度学习检测模型，实现了前、后、左、右、启、停等至少8种手势的识别。
+  - name: climb
+    title: 攀爬规范检测
+    thumbnail_type: jpg
+    description: 主要根据攀爬作业规范要求，优选人体骨骼姿态关节点特征信息，建立攀爬规范判别模型，可实现不同场景下的攀爬行为规范实时检测。
+  - name: antiepidemic
+    title: 防疫服穿着检测
+    thumbnail_type: jpg
+    description: 主要根据冷库等重点场所防疫要求，利用深度学习检测模型，实现工作人员穿着防疫服的实时高精度识别。
+  - name: mask
+    title: 口罩佩戴检测
+    thumbnail_type: jpg
+    description: 主要针对不同距离、不同视角、不同背景等复杂多人环境，构建了高精度人员口罩佩戴检测模型，可满足药店、市场、医院等不同场所的检测需求。
+  - name: occupancy
+    title: 占道物检测
+    thumbnail_type: jpg
+    description: 主要利用深度学习方法建立市场占道物实时检测模型，助于农贸市场等场所规范化经营管理。
+  - name: ocr
+    title: 文字识别
+    thumbnail_type: jpg
+    description: 主要设计与利用轻量化的卷积神经网络，建立全方向、高精度的文字检测和识别模型，可满足不同场景下的中英文文字实时检测需求。
+  - name: bayberry
+    title: 果实检测
+    thumbnail_type: jpg
+    description: 主要根据果实不同成熟阶段的颜色、纹理等特征来实现潜在果实区域检测、成熟度分级评估，以方便实现农业自动化采收管理。
+  - name: fvclassification
+    title: 果蔬分类
+    thumbnail_type: jpg
+    description: 主要应用轻量化的卷积神经网络，建立面向水果、蔬菜的物体分类识别模型，可应用于商超果蔬智能秤系统，实现果蔬生鲜商品的快速智能化称重打标。
+  - name: segmentation
+    title: 果实分割
+    thumbnail_type: jpg
+    description: 主要应用卷积神经网络和图像处理技术建立果实实例分割模型，杨梅等果实的高精度目标分割与边缘定位。
+  - name: yield
+    title: 果实产量估计
+    thumbnail_type: jpg
+    description: 主要根据果园果实远距离采集场景特点，建立大视场下的小目标检测卷积神经网络模型，实现果园荔枝、杨梅等果实的产量准确估计。
+  - name: ridge
+    title: 垄线识别
+    thumbnail_type: jpg
+    description: 主要利用车道线检测思想，建立面向规范种植的田间垄线检测模型，助于田间种植智能化、机械化作业。
+
+---
+
+<section class="bg-light card mx-0 my-5 p-0">
+  <div class="card-body row">
+    {% for algorithm in page.algorithms %}
+    <div class="col-xl-3 col-lg-4 col-md-6 my-3">
+      <div class="card h-100">
+        <img class="card-img img-thumbnail" src="https://cdn.ergonomic.top/images/technologies/{{ algorithm.name }}/thumbnail.{{ algorithm.thumbnail_type }}" alt="{{ algorithm.title }}" />
+        <div class="card-header">
+          <h4>{{ algorithm.title }}</h4>
+        </div>
+        <div class="card-body">{{ algorithm.description }}</div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</section>
