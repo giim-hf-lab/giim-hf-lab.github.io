@@ -28,39 +28,39 @@ overview_image_type: png
 {: .text-center}
 
 {: .text-center}
-![Examples of the data augmentation](https://images.cdn.ergonomic.top{{ page.url }}/1.png){: .w-75}
+![Examples of the data augmentation](https://cdn.ergonomic.top/images{{ page.url }}/1.png){: .w-75}
 
 
 ## 算法总体方案
 {: .text-center}
 
 {: .text-center}
-![Overall scheme of the proposed method](https://images.cdn.ergonomic.top{{ page.url }}/2.png){: .w-75}
+![Overall scheme of the proposed method](https://cdn.ergonomic.top/images{{ page.url }}/2.png){: .w-75}
 
 
 ## Puzzle算法流程
 {: .text-center}
 
 {: .text-center}
-![The flow of the puzzle algorithm](https://images.cdn.ergonomic.top{{ page.url }}/3.png){: .w-75}
+![The flow of the puzzle algorithm](https://cdn.ergonomic.top/images{{ page.url }}/3.png){: .w-75}
 
 
 ## 不同语义分割方法的效果展示
 {: .text-center}
 
 {: .text-center}
-![Visual results of different semantic segmentation methods](https://images.cdn.ergonomic.top{{ page.url }}/4.png){: .w-75}
+![Visual results of different semantic segmentation methods](https://cdn.ergonomic.top/images{{ page.url }}/4.png){: .w-75}
 
 
 ## 不同实例分割方法的效果展示
 {: .text-center}
 
 {: .text-center}
-![Visual results of different instance segmentation methods](https://images.cdn.ergonomic.top{{ page.url }}/5.png){: .w-75}
+![Visual results of different instance segmentation methods](https://cdn.ergonomic.top/images{{ page.url }}/5.png){: .w-75}
 
 
 ## 不同现实复杂环境下的结果展示
 {: .text-center}
 
 {: .text-center}
-![Segmentation results in different real-life environments](https://images.cdn.ergonomic.top{{ page.url }}/6.png){: .w-75}
+![Segmentation results in different real-life environments](https://cdn.ergonomic.top/images{{ page.url }}/6.png){: .w-75}
